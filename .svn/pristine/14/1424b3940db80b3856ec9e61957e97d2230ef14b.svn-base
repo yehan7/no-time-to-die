@@ -1,0 +1,5 @@
+#配置服务端口号
+server:
+  port: 8081
+  servlet:
+    context-path: /yh/pro

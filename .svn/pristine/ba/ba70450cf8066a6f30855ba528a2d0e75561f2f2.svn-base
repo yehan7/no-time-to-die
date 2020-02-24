@@ -1,0 +1,18 @@
+package com.yh.business.service.impl;
+
+import com.yh.business.service.YhService;
+import org.springframework.stereotype.Service;
+
+/**
+ * Created by idea China
+ * Author: YH007
+ * Time: 20:10 2020/2/9
+ * Description:
+ */
+@Service
+public class YhServiceImpl implements YhService {
+    @Override
+    public void get() {
+        System.out.println("业务处理");
+    }
+}

@@ -1,0 +1,31 @@
+package com.yh.core.startload;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Component;
+
+/**
+ * Created by idea China
+ * Author: YH007
+ * Time: 19:55 2020/2/5
+ * Description:
+ */
+
+@Component
+public class YhStartLoad implements CommandLineRunner {
+
+    private static Logger LOGGER = LoggerFactory.getLogger(YhStartLoad.class);
+
+    @Autowired
+    private Environment environment;
+
+    @Override
+    public void run(String... args) throws Exception {
+        String property = environment.getProperty("logging.config");
+        LOGGER.info("获取到的值为：" + property);
+
+    }
+}

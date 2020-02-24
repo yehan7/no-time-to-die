@@ -1,0 +1,65 @@
+package com.yh.business.utils;
+
+
+import com.alibaba.fastjson.JSON;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+import org.springframework.util.StringUtils;
+
+import java.io.IOException;
+import java.util.Map;
+
+/**
+ * Created by idea China Author: YH007 Time: 20:08 2020/1/22 Description:
+ */
+public class HttpUtils {
+
+    /**
+     * @param: url  url
+     * @param: param  param
+     * @param: header  header
+     * @param: body  body
+     * @return: java.lang.String
+     */
+    public static String doHttpPost(String url, Map<String, String> param,
+                                    Map<String, String> header, Map<String, ?> body) {
+        HttpClient client = HttpClients.createDefault();
+        HttpPost httpPost = new HttpPost(url);
+        if (null != param && param.keySet().size() > 0) {
+            StringBuffer paramStr = new StringBuffer();
+            for (Map.Entry<String, String> paramEntry : param.entrySet()) {
+                if (StringUtils.isEmpty(paramStr.toString())) {
+                    paramStr.append(paramEntry.getKey() + "=" + paramEntry.getValue());
+                } else {
+                    paramStr.append("&").append(paramEntry.getKey() + "=" + paramEntry.getValue());
+
+                }
+            }
+            httpPost = new HttpPost(url + "?" + paramStr);
+        }
+        if (null != header && header.keySet().size() > 0) {
+            for (Map.Entry<String, String> headerEntry : header.entrySet()) {
+                httpPost.setHeader(headerEntry.getKey(), headerEntry.getValue());
+            }
+        }
+        httpPost.setHeader("Content-Type", "application/json;charset=utf8");
+        String jsonString = JSON.toJSONString(body);
+        StringEntity bodyEntity = new StringEntity(jsonString, "UTF-8");
+        httpPost.setEntity(bodyEntity);
+        try {
+            HttpResponse response = client.execute(httpPost);
+            HttpEntity entity = response.getEntity();
+            return EntityUtils.toString(entity);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+}
