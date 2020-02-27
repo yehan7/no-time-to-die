@@ -9,4 +9,5 @@ package com.yh.business.service;
 public interface YhService {
 
     void get();
+
 }
