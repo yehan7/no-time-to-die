@@ -1,12 +1,17 @@
 package com.yh.service;
 
+import cn.hutool.Hutool;
+import cn.hutool.http.HttpUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 
 
 import com.yh.business.entity.Person;
 import com.yh.business.mapper.PersonMapper;
+import com.yh.business.schedule.TestTask;
+import com.yh.business.service.XxService;
 import com.yh.business.service.YhService;
+import com.yh.business.thread.AsyncTask;
 import com.yh.business.utils.AddressUtils;
 import com.yh.business.utils.CommonUtils;
 import com.yh.business.utils.HttpUtils;
@@ -16,6 +21,7 @@ import com.yh.business.vo.ResultOutVo;
 import org.apache.logging.log4j.LogManager;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.quartz.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.AmqpAdmin;
@@ -25,12 +31,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.*;
 import java.util.*;
-import java.util.concurrent.BlockingDeque;
-import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.*;
 
 /**
  * Created by idea China
@@ -189,6 +195,7 @@ public class YhServiceTest {
     @Test
     public void test13() {
         yhService.get();
+        String json = "{\"name\": \"yh\", \"id\": \"007\"}";
     }
 
     @Autowired
@@ -221,4 +228,58 @@ public class YhServiceTest {
     public void testAMQPAdmin() {
         amqpAdmin.declareExchange(new DirectExchange("admin.exchange"));
     }
+
+    @Test
+    public void testThreadPool() {
+        ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(3, 10, 60,
+                TimeUnit.SECONDS, new ArrayBlockingQueue<>(10), Executors.defaultThreadFactory());
+        try {
+            for (int i = 0; i < 10; i++) {
+                int finalI = i;
+                poolExecutor.execute(new Runnable() {
+                    @Override
+                    public void run() {
+                        System.out.println("当前是线程" + finalI + "：" + Thread.currentThread());
+                    }
+                });
+            }
+        } catch (Exception e) {
+            LOGGER.error("系统异常：", e);
+        }
+    }
+
+
+    @Autowired
+    AsyncTask asyncTask;
+
+    @Autowired
+    XxService xxService;
+
+    @Test
+    public void test90() {
+        for (int i = 0; i < 1000; i++) {
+            xxService.testPool();
+            //asyncTask.doTest();
+
+        }
+    }
+
+    @Autowired
+    private Scheduler scheduler;
+
+    @Test
+    public void test888() throws Exception {
+
+
+        JobDetail jobDetail = JobBuilder.newJob(TestTask.class).
+                withIdentity("yh").usingJobData("jobMessage", "test").build();
+        Trigger trigger = TriggerBuilder.newTrigger().withIdentity("yh").
+                usingJobData("triggerMessage", "test").
+                withSchedule(CronScheduleBuilder.cronSchedule("*/1 * * * * ?")).build();
+
+        scheduler.scheduleJob(jobDetail, trigger);
+        scheduler.start();
+    }
+
+
 }
