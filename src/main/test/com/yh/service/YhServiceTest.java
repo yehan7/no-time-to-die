@@ -6,6 +6,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 
 
+import com.google.common.cache.Cache;
 import com.yh.business.entity.Person;
 import com.yh.business.mapper.PersonMapper;
 import com.yh.business.schedule.TestTask;
@@ -18,7 +19,9 @@ import com.yh.business.utils.HttpUtils;
 import com.yh.business.utils.RedisUtils;
 import com.yh.business.vo.ConditionInVo;
 import com.yh.business.vo.ResultOutVo;
+import lombok.var;
 import org.apache.logging.log4j.LogManager;
+import org.aspectj.weaver.ast.Var;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.quartz.*;
@@ -267,6 +270,9 @@ public class YhServiceTest {
     @Autowired
     private Scheduler scheduler;
 
+    @Autowired
+    private Cache cache;
+
     @Test
     public void test888() throws Exception {
 
@@ -279,6 +285,19 @@ public class YhServiceTest {
 
         scheduler.scheduleJob(jobDetail, trigger);
         scheduler.start();
+    }
+
+
+    @Test
+    public void test000() {
+        String value = (String) cache.getIfPresent("yh");
+        System.out.println("value：" + value);
+    }
+
+    @Test
+    public void test111() {
+
+
     }
 
 
