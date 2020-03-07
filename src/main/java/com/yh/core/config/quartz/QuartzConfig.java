@@ -3,15 +3,22 @@ package com.yh.core.config.quartz;
 import com.yh.business.schedule.TestTask;
 import org.quartz.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 
 @Configuration
+@ConfigurationProperties(prefix = "quartz")
 public class QuartzConfig {
+
 
     @Autowired
     private JobFactory jobFactory;
+
+    private String enable;
+
 
     @Bean
     public SchedulerFactoryBean schedulerFactoryBean() {
@@ -28,6 +35,9 @@ public class QuartzConfig {
 
     @Bean
     public Scheduler scheduler() throws SchedulerException {
+        while(enable.equals("false")){
+            return null;
+        }
         Scheduler scheduler = schedulerFactoryBean().getScheduler();
 
         JobDetail jobDetail = JobBuilder.newJob(TestTask.class).
@@ -41,8 +51,11 @@ public class QuartzConfig {
         return scheduler;
     }
 
+    public String getEnable() {
+        return enable;
+    }
 
-
-
-
+    public void setEnable(String enable) {
+        this.enable = enable;
+    }
 }
