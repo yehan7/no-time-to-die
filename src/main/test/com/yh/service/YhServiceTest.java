@@ -1,11 +1,7 @@
 package com.yh.service;
 
-import cn.hutool.Hutool;
-import cn.hutool.http.HttpUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-
-
 import com.google.common.cache.Cache;
 import com.yh.business.entity.Person;
 import com.yh.business.mapper.PersonMapper;
@@ -19,9 +15,6 @@ import com.yh.business.utils.HttpUtils;
 import com.yh.business.utils.RedisUtils;
 import com.yh.business.vo.ConditionInVo;
 import com.yh.business.vo.ResultOutVo;
-import lombok.var;
-import org.apache.logging.log4j.LogManager;
-import org.aspectj.weaver.ast.Var;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.quartz.*;
@@ -34,12 +27,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.*;
 import java.util.*;
-import java.util.concurrent.*;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by idea China
@@ -293,6 +288,7 @@ public class YhServiceTest {
         String value = (String) cache.getIfPresent("yh");
         System.out.println("value：" + value);
     }
+
 
     @Test
     public void test111() {
