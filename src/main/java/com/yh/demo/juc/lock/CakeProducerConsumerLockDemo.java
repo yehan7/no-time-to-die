@@ -6,7 +6,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * @Description:
+ * @Description: Lock生产者消费者
  * @Since: YH007
  * @Date: 2020/3/6
  */

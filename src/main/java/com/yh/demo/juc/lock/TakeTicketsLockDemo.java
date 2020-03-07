@@ -4,7 +4,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * @Description:
+ * @Description: Lock抢票
  * @Since: YH007
  * @Date: 2020/3/6
  */

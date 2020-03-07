@@ -1,7 +1,7 @@
 package com.yh.demo.juc.aync;
 
 /**
- * @Description:
+ * @Description: synchronized生产消费者
  * @Since: YH007
  * @Date: 2020/3/6
  */

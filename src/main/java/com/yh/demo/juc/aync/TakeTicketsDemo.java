@@ -1,7 +1,7 @@
 package com.yh.demo.juc.aync;
 
 /**
- * @Description:
+ * @Description: synchronized抢票
  * @Since: YH007
  * @Date: 2020/3/6
  */
