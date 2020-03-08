@@ -18,7 +18,8 @@ public class SemaphoreDemo
 
         for (int i = 1; i <= 8; i++)
         {
-            new Thread(() -> {
+            new Thread(() ->
+            {
 
                 try
                 {

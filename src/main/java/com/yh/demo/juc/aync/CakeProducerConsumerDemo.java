@@ -15,7 +15,8 @@ public class CakeProducerConsumerDemo
         Cake cake = new Cake();
         for (int i = 0; i < 10; i++)
         {
-            new Thread(() -> {
+            new Thread(() ->
+            {
                 try
                 {
                     cake.increment();
@@ -28,7 +29,8 @@ public class CakeProducerConsumerDemo
         }
         for (int i = 0; i < 10; i++)
         {
-            new Thread(() -> {
+            new Thread(() ->
+            {
                 try
                 {
                     cake.decrement();
@@ -42,7 +44,8 @@ public class CakeProducerConsumerDemo
 
         for (int i = 0; i < 10; i++)
         {
-            new Thread(() -> {
+            new Thread(() ->
+            {
                 try
                 {
                     cake.increment();
@@ -55,7 +58,8 @@ public class CakeProducerConsumerDemo
         }
         for (int i = 0; i < 10; i++)
         {
-            new Thread(() -> {
+            new Thread(() ->
+            {
                 try
                 {
                     cake.decrement();

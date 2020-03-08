@@ -15,7 +15,8 @@ public class TakeTicketsDemo
 
         for (int i = 0; i < 1000; i++)
         {
-            new Thread(() -> {
+            new Thread(() ->
+            {
                 ticket.take();
             }).start();
         }

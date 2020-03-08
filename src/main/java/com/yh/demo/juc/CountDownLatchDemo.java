@@ -23,7 +23,8 @@ public class CountDownLatchDemo
     {
         for (int i = 0; i < 10; i++)
         {
-            new Thread(() -> {
+            new Thread(() ->
+            {
                 System.out.println(Thread.currentThread().getName() + "走了");
                 countDownLatch.countDown();
             }).start();

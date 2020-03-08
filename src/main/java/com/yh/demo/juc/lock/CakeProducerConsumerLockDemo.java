@@ -20,7 +20,8 @@ public class CakeProducerConsumerLockDemo
         Cakes cake = new Cakes();
         for (int i = 0; i < 10; i++)
         {
-            new Thread(() -> {
+            new Thread(() ->
+            {
                 try
                 {
                     cake.increment();
@@ -33,7 +34,8 @@ public class CakeProducerConsumerLockDemo
         }
         for (int i = 0; i < 10; i++)
         {
-            new Thread(() -> {
+            new Thread(() ->
+            {
                 try
                 {
                     cake.decrement();
@@ -47,7 +49,8 @@ public class CakeProducerConsumerLockDemo
 
         for (int i = 0; i < 10; i++)
         {
-            new Thread(() -> {
+            new Thread(() ->
+            {
                 try
                 {
                     cake.increment();
@@ -60,7 +63,8 @@ public class CakeProducerConsumerLockDemo
         }
         for (int i = 0; i < 10; i++)
         {
-            new Thread(() -> {
+            new Thread(() ->
+            {
                 try
                 {
                     cake.decrement();

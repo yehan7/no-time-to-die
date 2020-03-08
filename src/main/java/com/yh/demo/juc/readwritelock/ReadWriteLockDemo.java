@@ -19,7 +19,8 @@ public class ReadWriteLockDemo
         for (int i = 1; i <= 5; i++)
         {
             final int num = i;
-            new Thread(() -> {
+            new Thread(() ->
+            {
                 myCache.put("key", String.valueOf(num));
             }, "写线程" + i).start();
         }
@@ -27,7 +28,8 @@ public class ReadWriteLockDemo
         for (int i = 1; i <= 5; i++)
         {
             final int num = i;
-            new Thread(() -> {
+            new Thread(() ->
+            {
                 myCache.get("key");
             }, "读线程" + i).start();
         }

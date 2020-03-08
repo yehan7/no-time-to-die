@@ -18,7 +18,8 @@ public class CirclePrintLockDemo
 
         for (int i = 0; i < 10; i++)
         {
-            new Thread(() -> {
+            new Thread(() ->
+            {
                 try
                 {
                     circle.print1();
@@ -32,7 +33,8 @@ public class CirclePrintLockDemo
 
         for (int i = 0; i < 10; i++)
         {
-            new Thread(() -> {
+            new Thread(() ->
+            {
                 try
                 {
                     circle.print2();
@@ -46,7 +48,8 @@ public class CirclePrintLockDemo
 
         for (int i = 0; i < 10; i++)
         {
-            new Thread(() -> {
+            new Thread(() ->
+            {
                 try
                 {
                     circle.print3();

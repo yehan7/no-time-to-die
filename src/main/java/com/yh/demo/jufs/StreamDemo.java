@@ -67,9 +67,11 @@ public class StreamDemo
         //比如：这里有一个返回的结果集：
         // 1.找出偶数id并且年级大于24
         // 2.按照年级倒叙
-        List<User> collect = users.stream().filter(u -> {
+        List<User> collect = users.stream().filter(u ->
+        {
             return u.getAge() % 2 == 0;
-        }).filter(u -> {
+        }).filter(u ->
+        {
             return u.getAge() > 24;
         }).sorted(Comparator.comparing(User::getAge).reversed()).collect(Collectors.toList());
 
