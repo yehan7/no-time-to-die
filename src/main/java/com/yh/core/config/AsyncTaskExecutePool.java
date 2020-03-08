@@ -17,13 +17,15 @@ import java.util.concurrent.ThreadPoolExecutor;
 @Configuration
 @EnableAsync
 @EnableScheduling
-public class AsyncTaskExecutePool implements AsyncConfigurer {
+public class AsyncTaskExecutePool implements AsyncConfigurer
+{
 
     private static Logger LOGGER = LoggerFactory.getLogger(AsyncTaskExecutePool.class);
 
 
     @Override
-    public Executor getAsyncExecutor() {
+    public Executor getAsyncExecutor()
+    {
         ThreadPoolTaskExecutor poolExecutor = new ThreadPoolTaskExecutor();
         poolExecutor.setCorePoolSize(4);
         poolExecutor.setMaxPoolSize(8);
@@ -37,7 +39,8 @@ public class AsyncTaskExecutePool implements AsyncConfigurer {
     }
 
     @Override
-    public AsyncUncaughtExceptionHandler getAsyncUncaughtExceptionHandler() {
+    public AsyncUncaughtExceptionHandler getAsyncUncaughtExceptionHandler()
+    {
         return ((throwable, method, objects) -> {
             LOGGER.error(throwable.getMessage());
         });

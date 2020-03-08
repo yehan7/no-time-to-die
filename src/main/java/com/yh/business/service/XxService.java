@@ -1,5 +1,6 @@
 package com.yh.business.service;
 
-public interface XxService {
+public interface XxService
+{
     public void testPool();
 }

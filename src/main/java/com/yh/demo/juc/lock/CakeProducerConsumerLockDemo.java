@@ -10,45 +10,63 @@ import java.util.concurrent.locks.ReentrantLock;
  * @Since: YH007
  * @Date: 2020/3/6
  */
-public class CakeProducerConsumerLockDemo {
+public class CakeProducerConsumerLockDemo
+{
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 
         Cakes cake = new Cakes();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++)
+        {
             new Thread(() -> {
-                try {
+                try
+                {
                     cake.increment();
-                } catch (InterruptedException e) {
+                }
+                catch (InterruptedException e)
+                {
                     e.printStackTrace();
                 }
             }, "A").start();
         }
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++)
+        {
             new Thread(() -> {
-                try {
+                try
+                {
                     cake.decrement();
-                } catch (InterruptedException e) {
+                }
+                catch (InterruptedException e)
+                {
                     e.printStackTrace();
                 }
             }, "B").start();
         }
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++)
+        {
             new Thread(() -> {
-                try {
+                try
+                {
                     cake.increment();
-                } catch (InterruptedException e) {
+                }
+                catch (InterruptedException e)
+                {
                     e.printStackTrace();
                 }
             }, "C").start();
         }
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++)
+        {
             new Thread(() -> {
-                try {
+                try
+                {
                     cake.decrement();
-                } catch (InterruptedException e) {
+                }
+                catch (InterruptedException e)
+                {
                     e.printStackTrace();
                 }
             }, "D").start();
@@ -56,7 +74,8 @@ public class CakeProducerConsumerLockDemo {
     }
 }
 
-class Cakes {
+class Cakes
+{
 
     private int num = 0;
 
@@ -65,11 +84,14 @@ class Cakes {
     private Condition condition = lock.newCondition();
 
 
-    public void increment() throws InterruptedException {
+    public void increment() throws InterruptedException
+    {
         lock.lock();
 
-        try {
-            while (num != 0) {
+        try
+        {
+            while (num != 0)
+            {
                 condition.await();
             }
             num++;
@@ -77,18 +99,23 @@ class Cakes {
             System.out.println(Thread.currentThread().getName() + " " + num);
 
             condition.signalAll();
-        } finally {
+        }
+        finally
+        {
             lock.unlock();
 
         }
 
     }
 
-    public void decrement() throws InterruptedException {
+    public void decrement() throws InterruptedException
+    {
 
         lock.lock();
-        try {
-            while (num == 0) {
+        try
+        {
+            while (num == 0)
+            {
                 condition.await();
             }
             num--;
@@ -96,7 +123,9 @@ class Cakes {
             System.out.println(Thread.currentThread().getName() + " " + num);
 
             condition.signalAll();
-        } finally {
+        }
+        finally
+        {
 
             lock.unlock();
         }

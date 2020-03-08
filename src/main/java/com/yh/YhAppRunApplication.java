@@ -23,11 +23,13 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableRabbit
 @EnableAsync
 @ServletComponentScan(basePackages = "com.yh.service.filters")
-public class YhAppRunApplication {
+public class YhAppRunApplication
+{
 
     private static Logger LOGGER = LoggerFactory.getLogger(YhAppRunApplication.class);
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         LOGGER.info("com.yh.YhAppRunApplication start ....");
         SpringApplication.run(YhAppRunApplication.class, args);
         LOGGER.info("com.yh.YhAppRunApplication success");

@@ -23,34 +23,45 @@ import java.io.InputStream;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class XmlTest {
+public class XmlTest
+{
 
     @Test
-    public void test1() {
+    public void test1()
+    {
         String xpath = "C:\\Users\\YH\\OneDrive\\桌面\\test.xml";
         String elementName = "name";
-        try {
+        try
+        {
             xpathForCountByEN(xpath, elementName);
-        } catch (FileNotFoundException e) {
+        }
+        catch (FileNotFoundException e)
+        {
             e.printStackTrace();
-        } catch (XMLStreamException e) {
+        }
+        catch (XMLStreamException e)
+        {
             e.printStackTrace();
         }
 
     }
 
-    public int xpathForCountByEN(String xpath, String elementName) throws FileNotFoundException, XMLStreamException {
+    public int xpathForCountByEN(String xpath, String elementName) throws FileNotFoundException, XMLStreamException
+    {
         XMLInputFactory inputFactory = XMLInputFactory.newInstance();
         File file = new File(xpath);
 
         InputStream is = new FileInputStream(file);
         XMLStreamReader streamReader = inputFactory.createXMLStreamReader(is);
         int count = 0;
-        while (streamReader.hasNext()) {
+        while (streamReader.hasNext())
+        {
             streamReader.next();
-            if (streamReader.getEventType() == XMLStreamReader.START_ELEMENT) {
+            if (streamReader.getEventType() == XMLStreamReader.START_ELEMENT)
+            {
                 System.out.println(streamReader.getLocalName());
-                if (streamReader.getLocalName().equals(elementName)) {
+                if (streamReader.getLocalName().equals(elementName))
+                {
                     count++;
                 }
             }

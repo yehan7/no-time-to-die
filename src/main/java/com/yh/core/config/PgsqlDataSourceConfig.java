@@ -21,7 +21,8 @@ import javax.sql.DataSource;
  */
 @Configuration
 @MapperScan(basePackages = PgsqlDataSourceConfig.PACKAGE, sqlSessionFactoryRef = "pgSqlSessionFactory")
-public class PgsqlDataSourceConfig {
+public class PgsqlDataSourceConfig
+{
 
     static final String PACKAGE = "com.yh.business.mapper";
     static final String MAPPER_LOCATION = "classpath:mapper/**/*.xml";
@@ -64,7 +65,8 @@ public class PgsqlDataSourceConfig {
     private String maxOpenPreparedStatements;
 
     @Bean(name = "pgDataSource")
-    public DataSource pgDataSource() {
+    public DataSource pgDataSource()
+    {
         DruidDataSource druidDataSource = new DruidDataSource();
         druidDataSource.setDriverClassName(driverClass);
         druidDataSource.setUrl(url);
@@ -86,12 +88,14 @@ public class PgsqlDataSourceConfig {
     }
 
     @Bean(name = "pgTransactionManager")
-    public DataSourceTransactionManager pgTransactionManager() {
+    public DataSourceTransactionManager pgTransactionManager()
+    {
         return new DataSourceTransactionManager(pgDataSource());
     }
 
     @Bean(name = "pgSqlSessionFactory")
-    public SqlSessionFactory clusterSqlSessionFactory(@Qualifier("pgDataSource") DataSource pgDataSource) throws Exception {
+    public SqlSessionFactory clusterSqlSessionFactory(@Qualifier("pgDataSource") DataSource pgDataSource) throws Exception
+    {
         final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(pgDataSource);
         sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver()

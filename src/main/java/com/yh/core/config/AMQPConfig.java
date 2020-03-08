@@ -6,10 +6,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class AMQPConfig {
+public class AMQPConfig
+{
 
     @Bean
-    public MessageConverter messageConverter() {
+    public MessageConverter messageConverter()
+    {
         return new Jackson2JsonMessageConverter();
     }
 

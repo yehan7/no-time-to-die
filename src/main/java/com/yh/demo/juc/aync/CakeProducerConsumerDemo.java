@@ -5,45 +5,63 @@ package com.yh.demo.juc.aync;
  * @Since: YH007
  * @Date: 2020/3/6
  */
-public class CakeProducerConsumerDemo {
+public class CakeProducerConsumerDemo
+{
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 
         Cake cake = new Cake();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++)
+        {
             new Thread(() -> {
-                try {
+                try
+                {
                     cake.increment();
-                } catch (InterruptedException e) {
+                }
+                catch (InterruptedException e)
+                {
                     e.printStackTrace();
                 }
             }, "A").start();
         }
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++)
+        {
             new Thread(() -> {
-                try {
+                try
+                {
                     cake.decrement();
-                } catch (InterruptedException e) {
+                }
+                catch (InterruptedException e)
+                {
                     e.printStackTrace();
                 }
             }, "B").start();
         }
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++)
+        {
             new Thread(() -> {
-                try {
+                try
+                {
                     cake.increment();
-                } catch (InterruptedException e) {
+                }
+                catch (InterruptedException e)
+                {
                     e.printStackTrace();
                 }
             }, "C").start();
         }
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++)
+        {
             new Thread(() -> {
-                try {
+                try
+                {
                     cake.decrement();
-                } catch (InterruptedException e) {
+                }
+                catch (InterruptedException e)
+                {
                     e.printStackTrace();
                 }
             }, "D").start();
@@ -51,17 +69,20 @@ public class CakeProducerConsumerDemo {
     }
 }
 
-class Cake{
+class Cake
+{
 
     private int num = 0;
 
 
-    public synchronized void increment() throws InterruptedException {
+    public synchronized void increment() throws InterruptedException
+    {
 
-        while (num != 0){
+        while (num != 0)
+        {
             this.wait();
         }
-        num ++;
+        num++;
 
         System.out.println(Thread.currentThread().getName() + " " + num);
 
@@ -69,12 +90,14 @@ class Cake{
 
     }
 
-    public synchronized void decrement() throws InterruptedException {
+    public synchronized void decrement() throws InterruptedException
+    {
 
-        while(num == 0){
+        while (num == 0)
+        {
             this.wait();
         }
-        num --;
+        num--;
 
         System.out.println(Thread.currentThread().getName() + " " + num);
 

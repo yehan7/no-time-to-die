@@ -6,7 +6,8 @@ package com.yh.business.service;
  * Time: 20:10 2020/2/9
  * Description:
  */
-public interface YhService {
+public interface YhService
+{
 
     void get();
 

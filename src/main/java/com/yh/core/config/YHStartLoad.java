@@ -9,14 +9,15 @@ import org.springframework.stereotype.Component;
 import java.util.concurrent.TimeUnit;
 
 @Component
-public class YHStartLoad implements CommandLineRunner {
+public class YHStartLoad implements CommandLineRunner
+{
 
     @Autowired
     Cache cache;
 
     @Override
-    public void run(String... args) throws Exception {
-
+    public void run(String... args) throws Exception
+    {
 
 
         // 放入缓存

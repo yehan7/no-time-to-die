@@ -15,7 +15,8 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class RegexTest {
+public class RegexTest
+{
 
     private static Logger LOGGER = LoggerFactory.getLogger(RegexTest.class);
 
@@ -25,14 +26,16 @@ public class RegexTest {
    * 2.第一位字符为“1”
    * 3.第二位3/5/7/9*/
     @Test
-    public void test1(){
+    public void test1()
+    {
         String phoneNum = "132332344";
         String regex = "[1][35789][0-9]{9}";
         boolean matches = phoneNum.matches(regex);
         LOGGER.info("是否匹配：" + matches);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 
         String str = "肖杏说：我。。。我我。。我我我。。。。肖。，，。杏。。。就，，，。是。。。美女女。。。啊啊啊啊啊啊啊！";
         String s = str.replaceAll("(\\。)\\1*|(\\，)\\2+", "").replaceAll("(.)\\1+", "$1");
