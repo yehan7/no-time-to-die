@@ -1,0 +1,56 @@
+[12:24:17:811] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.checkCandidate(ClassPathMapperScanner.java:239) - Skipping MapperFactoryBean with name 'personMapper' and 'com.yh.business.mapper.PersonMapper' mapperInterface. Bean already defined with the same name!
+[12:24:17:824] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(ClassPathMapperScanner.java:166) - No MyBatis mapper was found in '[com.yh.*.mapper]' package. Please check your configuration.
+[12:26:16:415] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.checkCandidate(ClassPathMapperScanner.java:239) - Skipping MapperFactoryBean with name 'personMapper' and 'com.yh.business.mapper.PersonMapper' mapperInterface. Bean already defined with the same name!
+[12:26:16:417] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(ClassPathMapperScanner.java:166) - No MyBatis mapper was found in '[com.yh.*.mapper]' package. Please check your configuration.
+[12:26:20:774] [ERROR] - com.yh.service.YhServiceTest.testThreadPool(YhServiceTest.java:240) - 系统异常：
+java.util.concurrent.RejectedExecutionException: Task com.yh.service.YhServiceTest$1@64dc86c6 rejected from java.util.concurrent.ThreadPoolExecutor@26874f2c[Running, pool size = 2, active threads = 2, queued tasks = 5, completed tasks = 0]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2063) ~[?:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:830) ~[?:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1379) ~[?:1.8.0_201]
+	at com.yh.service.YhServiceTest.testThreadPool(YhServiceTest.java:232) [test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74) [spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84) [spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) [spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58) [junit-rt.jar:?]
+[12:28:11:803] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.checkCandidate(ClassPathMapperScanner.java:239) - Skipping MapperFactoryBean with name 'personMapper' and 'com.yh.business.mapper.PersonMapper' mapperInterface. Bean already defined with the same name!
+[12:28:11:804] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(ClassPathMapperScanner.java:166) - No MyBatis mapper was found in '[com.yh.*.mapper]' package. Please check your configuration.
+[12:29:08:103] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.checkCandidate(ClassPathMapperScanner.java:239) - Skipping MapperFactoryBean with name 'personMapper' and 'com.yh.business.mapper.PersonMapper' mapperInterface. Bean already defined with the same name!
+[12:29:08:104] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(ClassPathMapperScanner.java:166) - No MyBatis mapper was found in '[com.yh.*.mapper]' package. Please check your configuration.
+[12:29:37:246] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.checkCandidate(ClassPathMapperScanner.java:239) - Skipping MapperFactoryBean with name 'personMapper' and 'com.yh.business.mapper.PersonMapper' mapperInterface. Bean already defined with the same name!
+[12:29:37:247] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(ClassPathMapperScanner.java:166) - No MyBatis mapper was found in '[com.yh.*.mapper]' package. Please check your configuration.
+[12:30:29:554] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.checkCandidate(ClassPathMapperScanner.java:239) - Skipping MapperFactoryBean with name 'personMapper' and 'com.yh.business.mapper.PersonMapper' mapperInterface. Bean already defined with the same name!
+[12:30:29:555] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(ClassPathMapperScanner.java:166) - No MyBatis mapper was found in '[com.yh.*.mapper]' package. Please check your configuration.
+[12:30:52:722] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.checkCandidate(ClassPathMapperScanner.java:239) - Skipping MapperFactoryBean with name 'personMapper' and 'com.yh.business.mapper.PersonMapper' mapperInterface. Bean already defined with the same name!
+[12:30:52:723] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(ClassPathMapperScanner.java:166) - No MyBatis mapper was found in '[com.yh.*.mapper]' package. Please check your configuration.
+[12:31:39:281] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.checkCandidate(ClassPathMapperScanner.java:239) - Skipping MapperFactoryBean with name 'personMapper' and 'com.yh.business.mapper.PersonMapper' mapperInterface. Bean already defined with the same name!
+[12:31:39:282] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(ClassPathMapperScanner.java:166) - No MyBatis mapper was found in '[com.yh.*.mapper]' package. Please check your configuration.
+[12:32:04:982] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.checkCandidate(ClassPathMapperScanner.java:239) - Skipping MapperFactoryBean with name 'personMapper' and 'com.yh.business.mapper.PersonMapper' mapperInterface. Bean already defined with the same name!
+[12:32:04:983] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(ClassPathMapperScanner.java:166) - No MyBatis mapper was found in '[com.yh.*.mapper]' package. Please check your configuration.
+[12:32:47:813] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.checkCandidate(ClassPathMapperScanner.java:239) - Skipping MapperFactoryBean with name 'personMapper' and 'com.yh.business.mapper.PersonMapper' mapperInterface. Bean already defined with the same name!
+[12:32:47:814] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(ClassPathMapperScanner.java:166) - No MyBatis mapper was found in '[com.yh.*.mapper]' package. Please check your configuration.

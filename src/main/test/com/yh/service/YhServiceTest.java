@@ -325,6 +325,7 @@ public class YhServiceTest
     public void test111()
     {
 
+        redisUtils.set("yh", "007");
 
     }
 

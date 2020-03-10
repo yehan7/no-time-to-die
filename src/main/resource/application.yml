@@ -3,7 +3,7 @@ spring:
   application:
     name: yHApp
   redis:
-    host: 192.168.137.192 # Redis服务器地址
+    host: 182.92.129.244 # Redis服务器地址
     database: 0 #Redis数据库索引（默认为0）
     port: 6379 # Redis服务器连接端口
     jedis:
@@ -13,18 +13,19 @@ spring:
         max-idle: 8 # 连接池中的最大空闲连接
         min-idle: 0 # 连接池中的最小空闲连接
     timeout: 3000ms # 连接超时时间（毫秒）
+    password: yh007xx
   profiles:
     active: pro
   rabbitmq:
-    host: localhost
-    username: guest
-    password: guest
+    host: 182.92.129.244
+    username: yh007
+    password: yh007xx
 
 pgsql:
   datasource:
-    url: jdbc:postgresql://192.168.137.192:5432/postgres
+    url: jdbc:postgresql://182.92.129.244:5432/postgres
     username: postgres
-    password: 123456
+    password: yh007xx
     driver-class-name: org.postgresql.Driver
     maxActive: 50
     initialSize: 10

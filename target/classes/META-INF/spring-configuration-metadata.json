@@ -4,6 +4,11 @@
       "name": "person",
       "type": "com.yh.business.entity.Person",
       "sourceType": "com.yh.business.entity.Person"
+    },
+    {
+      "name": "quartz",
+      "type": "com.yh.core.config.quartz.QuartzConfig",
+      "sourceType": "com.yh.core.config.quartz.QuartzConfig"
     }
   ],
   "properties": [
@@ -41,6 +46,11 @@
       "name": "person.maps",
       "type": "java.util.Map<java.lang.String,java.lang.Object>",
       "sourceType": "com.yh.business.entity.Person"
+    },
+    {
+      "name": "quartz.enable",
+      "type": "java.lang.String",
+      "sourceType": "com.yh.core.config.quartz.QuartzConfig"
     }
   ],
   "hints": []

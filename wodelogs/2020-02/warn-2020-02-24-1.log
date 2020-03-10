@@ -1,0 +1,2 @@
+[13:08:07:160] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.checkCandidate(ClassPathMapperScanner.java:239) - Skipping MapperFactoryBean with name 'personMapper' and 'com.yh.business.mapper.PersonMapper' mapperInterface. Bean already defined with the same name!
+[13:08:07:162] [WARN] - org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(ClassPathMapperScanner.java:166) - No MyBatis mapper was found in '[com.yh.*.mapper]' package. Please check your configuration.

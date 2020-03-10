@@ -29,11 +29,9 @@ public class TakeTicketsLockDemo
 
 class Tickets
 {
-
     private int num = 100;
 
     private Lock lock = new ReentrantLock();
-
 
     public void take()
     {
