@@ -14,25 +14,21 @@ import java.io.IOException;
  */
 @Component
 @WebFilter(urlPatterns = "/*")
-public class LoginFilter implements Filter
-{
+public class LoginFilter implements Filter {
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException
-    {
+    public void init(FilterConfig filterConfig) throws ServletException {
         System.out.println("filter init function");
 
     }
 
     @Override
-    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException
-    {
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         System.out.println("do filter");
         filterChain.doFilter(servletRequest, servletResponse);
     }
 
     @Override
-    public void destroy()
-    {
+    public void destroy() {
         System.out.println("filter destroy");
     }
 }

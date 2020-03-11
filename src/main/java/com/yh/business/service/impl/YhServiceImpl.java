@@ -15,24 +15,20 @@ import java.util.Map;
  * Description:
  */
 @Service
-public class YhServiceImpl implements YhService
-{
+public class YhServiceImpl implements YhService {
     @Override
-    public void get()
-    {
+    public void get() {
         System.out.println("业务处理");
     }
 
 
     @RabbitListener(queues = "yh.news")
-    public void getMap(Map map)
-    {
+    public void getMap(Map map) {
         System.out.println(map);
     }
 
     @RabbitListener(queues = "yh.news")
-    public void getMap(Message message)
-    {
+    public void getMap(Message message) {
         System.out.println(message.getBody());
         System.out.println(message.getMessageProperties());
     }

@@ -14,8 +14,7 @@ import java.util.Date;
  * 创建者 科帮网
  * 创建时间	2017年7月31日
  */
-public class DateUtil
-{
+public class DateUtil {
     private final static SimpleDateFormat sdfYear = new SimpleDateFormat("yyyy");
 
     private final static SimpleDateFormat sdfDay = new SimpleDateFormat("yyyy-MM-dd");
@@ -29,8 +28,7 @@ public class DateUtil
      *
      * @return
      */
-    public static String getYear()
-    {
+    public static String getYear() {
         return sdfYear.format(new Date());
     }
 
@@ -41,8 +39,7 @@ public class DateUtil
      *
      * @return
      */
-    public static String getDay()
-    {
+    public static String getDay() {
         return sdfDay.format(new Date());
     }
 
@@ -51,8 +48,7 @@ public class DateUtil
      *
      * @return
      */
-    public static String getDays()
-    {
+    public static String getDays() {
         return sdfDays.format(new Date());
     }
 
@@ -61,8 +57,7 @@ public class DateUtil
      *
      * @return
      */
-    public static String getTime()
-    {
+    public static String getTime() {
         return sdfTime.format(new Date());
     }
 
@@ -75,10 +70,8 @@ public class DateUtil
      * @Description:(日期比较，如果s>=e 返回true 否则返回false)
      * @author luguosui
      */
-    public static boolean compareDate(String s, String e)
-    {
-        if (fomatDate(s) == null || fomatDate(e) == null)
-        {
+    public static boolean compareDate(String s, String e) {
+        if (fomatDate(s) == null || fomatDate(e) == null) {
             return false;
         }
         return fomatDate(s).getTime() >= fomatDate(e).getTime();
@@ -89,15 +82,11 @@ public class DateUtil
      *
      * @return
      */
-    public static Date fomatDate(String date)
-    {
+    public static Date fomatDate(String date) {
         DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
-        try
-        {
+        try {
             return fmt.parse(date);
-        }
-        catch (ParseException e)
-        {
+        } catch (ParseException e) {
             e.printStackTrace();
             return null;
         }
@@ -108,31 +97,23 @@ public class DateUtil
      *
      * @return
      */
-    public static boolean isValidDate(String s)
-    {
+    public static boolean isValidDate(String s) {
         DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
-        try
-        {
+        try {
             fmt.parse(s);
             return true;
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             // 如果throw java.text.ParseException或者NullPointerException，就说明格式不对
             return false;
         }
     }
 
-    public static int getDiffYear(String startTime, String endTime)
-    {
+    public static int getDiffYear(String startTime, String endTime) {
         DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
-        try
-        {
+        try {
             int years = (int) (((fmt.parse(endTime).getTime() - fmt.parse(startTime).getTime()) / (1000 * 60 * 60 * 24)) / 365);
             return years;
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             // 如果throw java.text.ParseException或者NullPointerException，就说明格式不对
             return 0;
         }
@@ -146,20 +127,16 @@ public class DateUtil
      * @return long
      * @author Administrator
      */
-    public static long getDaySub(String beginDateStr, String endDateStr)
-    {
+    public static long getDaySub(String beginDateStr, String endDateStr) {
         long day = 0;
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         Date beginDate = null;
         Date endDate = null;
 
-        try
-        {
+        try {
             beginDate = format.parse(beginDateStr);
             endDate = format.parse(endDateStr);
-        }
-        catch (ParseException e)
-        {
+        } catch (ParseException e) {
             e.printStackTrace();
         }
         day = (endDate.getTime() - beginDate.getTime()) / (24 * 60 * 60 * 1000);
@@ -174,8 +151,7 @@ public class DateUtil
      * @param days
      * @return
      */
-    public static String getAfterDayDate(String days)
-    {
+    public static String getAfterDayDate(String days) {
         int daysInt = Integer.parseInt(days);
 
         Calendar canlendar = Calendar.getInstance(); // java.util包
@@ -194,8 +170,7 @@ public class DateUtil
      * @param days
      * @return
      */
-    public static String getBeforeDayDate(String days)
-    {
+    public static String getBeforeDayDate(String days) {
         int daysInt = Integer.parseInt(days);
 
         Calendar canlendar = Calendar.getInstance(); // java.util包
@@ -213,8 +188,7 @@ public class DateUtil
      * @param days
      * @return
      */
-    public static String getAfterDayWeek(String days)
-    {
+    public static String getAfterDayWeek(String days) {
         int daysInt = Integer.parseInt(days);
 
         Calendar canlendar = Calendar.getInstance(); // java.util包
@@ -233,8 +207,7 @@ public class DateUtil
      * @param date
      * @return yyyy-MM-dd HH:mm:ss
      */
-    public static String date2Str(Date date)
-    {
+    public static String date2Str(Date date) {
         return date2Str(date, "yyyy-MM-dd");
     }
 
@@ -244,23 +217,16 @@ public class DateUtil
      * @param date
      * @return
      */
-    public static Date str2Date(String date)
-    {
-        if (StringUtils.isNotBlank(date))
-        {
+    public static Date str2Date(String date) {
+        if (StringUtils.isNotBlank(date)) {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            try
-            {
+            try {
                 return sdf.parse(date);
-            }
-            catch (ParseException e)
-            {
+            } catch (ParseException e) {
                 e.printStackTrace();
             }
             return new Date();
-        }
-        else
-        {
+        } else {
             return null;
         }
     }
@@ -272,19 +238,14 @@ public class DateUtil
      * @param format
      * @return
      */
-    public static String date2Str(Date date, String format)
-    {
-        if (null == format)
-        {
+    public static String date2Str(Date date, String format) {
+        if (null == format) {
             format = "yyyy-MM-dd";
         }
-        if (date != null)
-        {
+        if (date != null) {
             SimpleDateFormat sdf = new SimpleDateFormat(format);
             return sdf.format(date);
-        }
-        else
-        {
+        } else {
             return "";
         }
     }
@@ -294,15 +255,13 @@ public class DateUtil
      *
      * @param StrDate
      */
-    public static String getTimes(String StrDate)
-    {
+    public static String getTimes(String StrDate) {
         String resultTimes = "";
 
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date now;
 
-        try
-        {
+        try {
             now = new Date();
             Date date = df.parse(StrDate);
             long times = now.getTime() - date.getTime();
@@ -313,31 +272,23 @@ public class DateUtil
 
             StringBuffer sb = new StringBuffer();
             // sb.append("发表于：");
-            if (hour > 0)
-            {
+            if (hour > 0) {
                 sb.append(hour + "小时前");
-            }
-            else if (min > 0)
-            {
+            } else if (min > 0) {
                 sb.append(min + "分钟前");
-            }
-            else
-            {
+            } else {
                 sb.append(sec + "秒前");
             }
 
             resultTimes = sb.toString();
-        }
-        catch (ParseException e)
-        {
+        } catch (ParseException e) {
             e.printStackTrace();
         }
 
         return resultTimes;
     }
 
-    public static String getTimestamp()
-    {
+    public static String getTimestamp() {
         return String.valueOf(System.currentTimeMillis() / 1000);
     }
 }

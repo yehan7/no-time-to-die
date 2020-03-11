@@ -7,11 +7,9 @@ import java.util.concurrent.CountDownLatch;
  * @Since: YH007
  * @Date: 2020/3/7
  */
-public class CountDownLatchDemo
-{
+public class CountDownLatchDemo {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
 
         CountDownLatch countDownLatch = new CountDownLatch(10);
         closeDoor(countDownLatch);
@@ -19,10 +17,8 @@ public class CountDownLatchDemo
     }
 
 
-    public static void closeDoor(CountDownLatch countDownLatch)
-    {
-        for (int i = 0; i < 10; i++)
-        {
+    public static void closeDoor(CountDownLatch countDownLatch) {
+        for (int i = 0; i < 10; i++) {
             new Thread(() ->
             {
                 System.out.println(Thread.currentThread().getName() + "走了");
@@ -30,12 +26,9 @@ public class CountDownLatchDemo
             }).start();
         }
 
-        try
-        {
+        try {
             countDownLatch.await();
-        }
-        catch (InterruptedException e)
-        {
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
         System.out.println(Thread.currentThread().getName() + "关门");

@@ -43,8 +43,7 @@ import java.util.Map;
 /**
  * Created by idea China Author: YH007 Time: 20:08 2020/1/22 Description:
  */
-public class HttpUtils
-{
+public class HttpUtils {
 
     private static PoolingHttpClientConnectionManager connMgr;
     private static RequestConfig requestConfig;
@@ -52,8 +51,7 @@ public class HttpUtils
 
     private static final Logger logger = LoggerFactory.getLogger(HttpUtils.class);
 
-    static
-    {
+    static {
         // 设置连接池
         connMgr = new PoolingHttpClientConnectionManager();
         // 设置连接池大小
@@ -78,8 +76,7 @@ public class HttpUtils
      * @param url
      * @return
      */
-    public static JSONObject doGet(String url)
-    {
+    public static JSONObject doGet(String url) {
         return doGet(url, new HashMap<String, Object>());
     }
 
@@ -90,13 +87,11 @@ public class HttpUtils
      * @param params
      * @return
      */
-    public static JSONObject doGet(String url, Map<String, Object> params)
-    {
+    public static JSONObject doGet(String url, Map<String, Object> params) {
         String apiUrl = url;
         StringBuffer param = new StringBuffer();
         int i = 0;
-        for (String key : params.keySet())
-        {
+        for (String key : params.keySet()) {
             if (i == 0)
                 param.append("?");
             else
@@ -107,28 +102,21 @@ public class HttpUtils
         apiUrl += param;
         String result = null;
         HttpClient httpClient = null;
-        if (apiUrl.startsWith("https"))
-        {
+        if (apiUrl.startsWith("https")) {
             httpClient = HttpClients.custom().setSSLSocketFactory(createSSLConnSocketFactory())
                     .setConnectionManager(connMgr).setDefaultRequestConfig(requestConfig).build();
-        }
-        else
-        {
+        } else {
             httpClient = HttpClients.createDefault();
         }
-        try
-        {
+        try {
             HttpGet httpGet = new HttpGet(apiUrl);
             HttpResponse response = httpClient.execute(httpGet);
             HttpEntity entity = response.getEntity();
-            if (entity != null)
-            {
+            if (entity != null) {
                 InputStream instream = entity.getContent();
                 result = IOUtils.toString(instream, "UTF-8");
             }
-        }
-        catch (IOException e)
-        {
+        } catch (IOException e) {
 
         }
         return JSON.parseObject(result);
@@ -140,8 +128,7 @@ public class HttpUtils
      * @param apiUrl
      * @return
      */
-    public static JSONObject doPost(String apiUrl)
-    {
+    public static JSONObject doPost(String apiUrl) {
         return doPost(apiUrl, new HashMap<String, Object>());
     }
 
@@ -152,28 +139,22 @@ public class HttpUtils
      * @param params 参数map
      * @return
      */
-    public static JSONObject doPost(String apiUrl, Map<String, Object> params)
-    {
+    public static JSONObject doPost(String apiUrl, Map<String, Object> params) {
         CloseableHttpClient httpClient = null;
-        if (apiUrl.startsWith("https"))
-        {
+        if (apiUrl.startsWith("https")) {
             httpClient = HttpClients.custom().setSSLSocketFactory(createSSLConnSocketFactory())
                     .setConnectionManager(connMgr).setDefaultRequestConfig(requestConfig).build();
-        }
-        else
-        {
+        } else {
             httpClient = HttpClients.createDefault();
         }
         String httpStr = null;
         HttpPost httpPost = new HttpPost(apiUrl);
         CloseableHttpResponse response = null;
 
-        try
-        {
+        try {
             httpPost.setConfig(requestConfig);
             List<NameValuePair> pairList = new ArrayList<>(params.size());
-            for (Map.Entry<String, Object> entry : params.entrySet())
-            {
+            for (Map.Entry<String, Object> entry : params.entrySet()) {
                 NameValuePair pair = new BasicNameValuePair(entry.getKey(), entry.getValue().toString());
                 pairList.add(pair);
             }
@@ -181,21 +162,13 @@ public class HttpUtils
             response = httpClient.execute(httpPost);
             HttpEntity entity = response.getEntity();
             httpStr = EntityUtils.toString(entity, "UTF-8");
-        }
-        catch (IOException e)
-        {
+        } catch (IOException e) {
 
-        }
-        finally
-        {
-            if (response != null)
-            {
-                try
-                {
+        } finally {
+            if (response != null) {
+                try {
                     EntityUtils.consume(response.getEntity());
-                }
-                catch (IOException e)
-                {
+                } catch (IOException e) {
 
                 }
             }
@@ -210,24 +183,19 @@ public class HttpUtils
      * @param json   json对象
      * @return
      */
-    public static JSONObject doPost(String apiUrl, Object json)
-    {
+    public static JSONObject doPost(String apiUrl, Object json) {
         CloseableHttpClient httpClient = null;
-        if (apiUrl.startsWith("https"))
-        {
+        if (apiUrl.startsWith("https")) {
             httpClient = HttpClients.custom().setSSLSocketFactory(createSSLConnSocketFactory())
                     .setConnectionManager(connMgr).setDefaultRequestConfig(requestConfig).build();
-        }
-        else
-        {
+        } else {
             httpClient = HttpClients.createDefault();
         }
         String httpStr = null;
         HttpPost httpPost = new HttpPost(apiUrl);
         CloseableHttpResponse response = null;
 
-        try
-        {
+        try {
             httpPost.setConfig(requestConfig);
             StringEntity stringEntity = new StringEntity(json.toString(), "UTF-8");// 解决中文乱码问题
             stringEntity.setContentEncoding("UTF-8");
@@ -236,21 +204,13 @@ public class HttpUtils
             response = httpClient.execute(httpPost);
             HttpEntity entity = response.getEntity();
             httpStr = EntityUtils.toString(entity, "UTF-8");
-        }
-        catch (IOException e)
-        {
+        } catch (IOException e) {
 
-        }
-        finally
-        {
-            if (response != null)
-            {
-                try
-                {
+        } finally {
+            if (response != null) {
+                try {
                     EntityUtils.consume(response.getEntity());
-                }
-                catch (IOException e)
-                {
+                } catch (IOException e) {
 
                 }
             }
@@ -263,37 +223,28 @@ public class HttpUtils
      *
      * @return
      */
-    private static SSLConnectionSocketFactory createSSLConnSocketFactory()
-    {
+    private static SSLConnectionSocketFactory createSSLConnSocketFactory() {
         SSLConnectionSocketFactory sslsf = null;
-        try
-        {
-            SSLContext sslContext = new SSLContextBuilder().loadTrustMaterial(null, new TrustStrategy()
-            {
+        try {
+            SSLContext sslContext = new SSLContextBuilder().loadTrustMaterial(null, new TrustStrategy() {
 
                 @Override
-                public boolean isTrusted(java.security.cert.X509Certificate[] x509Certificates, String s) throws java.security.cert.CertificateException
-                {
+                public boolean isTrusted(java.security.cert.X509Certificate[] x509Certificates, String s) throws java.security.cert.CertificateException {
                     return true;
                 }
 
-                public boolean isTrusted(X509Certificate[] chain, String authType) throws CertificateException
-                {
+                public boolean isTrusted(X509Certificate[] chain, String authType) throws CertificateException {
                     return true;
                 }
             }).build();
-            sslsf = new SSLConnectionSocketFactory(sslContext, new HostnameVerifier()
-            {
+            sslsf = new SSLConnectionSocketFactory(sslContext, new HostnameVerifier() {
 
                 @Override
-                public boolean verify(String arg0, SSLSession arg1)
-                {
+                public boolean verify(String arg0, SSLSession arg1) {
                     return true;
                 }
             });
-        }
-        catch (GeneralSecurityException e)
-        {
+        } catch (GeneralSecurityException e) {
 
         }
         return sslsf;
@@ -308,31 +259,23 @@ public class HttpUtils
      * @return: java.lang.String
      */
     public static String doHttpPost(String url, Map<String, String> param,
-                                    Map<String, String> header, Map<String, ?> body)
-    {
+                                    Map<String, String> header, Map<String, ?> body) {
         HttpClient client = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost(url);
-        if (null != param && param.keySet().size() > 0)
-        {
+        if (null != param && param.keySet().size() > 0) {
             StringBuffer paramStr = new StringBuffer();
-            for (Map.Entry<String, String> paramEntry : param.entrySet())
-            {
-                if (StringUtils.isEmpty(paramStr.toString()))
-                {
+            for (Map.Entry<String, String> paramEntry : param.entrySet()) {
+                if (StringUtils.isEmpty(paramStr.toString())) {
                     paramStr.append(paramEntry.getKey() + "=" + paramEntry.getValue());
-                }
-                else
-                {
+                } else {
                     paramStr.append("&").append(paramEntry.getKey() + "=" + paramEntry.getValue());
 
                 }
             }
             httpPost = new HttpPost(url + "?" + paramStr);
         }
-        if (null != header && header.keySet().size() > 0)
-        {
-            for (Map.Entry<String, String> headerEntry : header.entrySet())
-            {
+        if (null != header && header.keySet().size() > 0) {
+            for (Map.Entry<String, String> headerEntry : header.entrySet()) {
                 httpPost.setHeader(headerEntry.getKey(), headerEntry.getValue());
             }
         }
@@ -340,14 +283,11 @@ public class HttpUtils
         String jsonString = JSON.toJSONString(body);
         StringEntity bodyEntity = new StringEntity(jsonString, "UTF-8");
         httpPost.setEntity(bodyEntity);
-        try
-        {
+        try {
             HttpResponse response = client.execute(httpPost);
             HttpEntity entity = response.getEntity();
             return EntityUtils.toString(entity);
-        }
-        catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return null;

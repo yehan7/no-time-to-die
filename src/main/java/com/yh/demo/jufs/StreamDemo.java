@@ -15,11 +15,9 @@ import java.util.stream.Stream;
  * @Since: YH007
  * @Date: 2020/3/7
  */
-public class StreamDemo
-{
+public class StreamDemo {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
 
 
         //--------------------------java.util.function包的函数式表达-------------------------

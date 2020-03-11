@@ -8,12 +8,10 @@ import org.springframework.stereotype.Component;
 import java.util.concurrent.TimeUnit;
 
 @Component
-public class GuavaCacheConfig
-{
+public class GuavaCacheConfig {
 
     @Bean
-    public Cache cache()
-    {
+    public Cache cache() {
         // 通过CacheBuilder构建一个缓存实例
         Cache<String, String> cache = CacheBuilder.newBuilder()
                 .maximumSize(100) // 设置缓存的最大容量

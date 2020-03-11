@@ -5,16 +5,13 @@ package com.yh.demo.juc.aync;
  * @Since: YH007
  * @Date: 2020/3/6
  */
-public class TakeTicketsDemo
-{
+public class TakeTicketsDemo {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
 
         Ticket ticket = new Ticket();
 
-        for (int i = 0; i < 1000; i++)
-        {
+        for (int i = 0; i < 1000; i++) {
             new Thread(() ->
             {
                 ticket.take();
@@ -25,17 +22,14 @@ public class TakeTicketsDemo
 }
 
 
-class Ticket
-{
+class Ticket {
 
     private int num = 100;
 
 
-    public synchronized void take()
-    {
+    public synchronized void take() {
 
-        while (num == 0)
-        {
+        while (num == 0) {
             System.out.println("没票了");
             return;
         }

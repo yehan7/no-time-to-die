@@ -8,12 +8,10 @@ import org.springframework.scheduling.quartz.QuartzJobBean;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class TestTask extends QuartzJobBean
-{
+public class TestTask extends QuartzJobBean {
 
     @Override
-    protected void executeInternal(JobExecutionContext jobExecutionContext) throws JobExecutionException
-    {
+    protected void executeInternal(JobExecutionContext jobExecutionContext) throws JobExecutionException {
 
         String jobMessage = jobExecutionContext.getJobDetail().getJobDataMap().getString("jobMessage");
         String triggerMessage = jobExecutionContext.getTrigger().getJobDataMap().getString("triggerMessage");

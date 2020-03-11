@@ -10,11 +10,9 @@ import java.util.concurrent.TimeUnit;
  * @Since: YH007
  * @Date: 2020/3/7
  */
-public class MyThread implements Callable
-{
+public class MyThread implements Callable {
     @Override
-    public Object call() throws Exception
-    {
+    public Object call() throws Exception {
 
         TimeUnit.SECONDS.sleep(4);
         System.out.println("执行call方法");
@@ -23,11 +21,9 @@ public class MyThread implements Callable
 }
 
 
-class CallableDemo
-{
+class CallableDemo {
 
-    public static void main(String[] args) throws ExecutionException, InterruptedException
-    {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
 
         FutureTask futureTask = new FutureTask(new MyThread());
         new Thread(futureTask).start();

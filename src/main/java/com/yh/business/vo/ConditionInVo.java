@@ -6,28 +6,23 @@ package com.yh.business.vo;
  * Time: 19:54 2020/1/22
  * Description:
  */
-public class ConditionInVo
-{
+public class ConditionInVo {
     private String name;
     private String pwd;
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
-    public void setName(String name)
-    {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getPwd()
-    {
+    public String getPwd() {
         return pwd;
     }
 
-    public void setPwd(String pwd)
-    {
+    public void setPwd(String pwd) {
         this.pwd = pwd;
     }
 }

@@ -16,8 +16,7 @@ import java.util.Map;
 //@PropertySource(value = {"classpath:personbean.yml"})
 @Component
 @ConfigurationProperties(prefix = "person")
-public class Person
-{
+public class Person {
     private String lastName;
     private Integer age;
     private Boolean boss;
@@ -26,79 +25,64 @@ public class Person
     private List<Object> lists;
     private Dog dog;
 
-    public String getLastName()
-    {
+    public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName)
-    {
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public Integer getAge()
-    {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(Integer age)
-    {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
-    public Boolean getBoss()
-    {
+    public Boolean getBoss() {
         return boss;
     }
 
-    public void setBoss(Boolean boss)
-    {
+    public void setBoss(Boolean boss) {
         this.boss = boss;
     }
 
-    public Date getBirth()
-    {
+    public Date getBirth() {
         return birth;
     }
 
-    public void setBirth(Date birth)
-    {
+    public void setBirth(Date birth) {
         this.birth = birth;
     }
 
-    public Map<String, Object> getMaps()
-    {
+    public Map<String, Object> getMaps() {
         return maps;
     }
 
-    public void setMaps(Map<String, Object> maps)
-    {
+    public void setMaps(Map<String, Object> maps) {
         this.maps = maps;
     }
 
-    public List<Object> getLists()
-    {
+    public List<Object> getLists() {
         return lists;
     }
 
-    public void setLists(List<Object> lists)
-    {
+    public void setLists(List<Object> lists) {
         this.lists = lists;
     }
 
-    public Dog getDog()
-    {
+    public Dog getDog() {
         return dog;
     }
 
-    public void setDog(Dog dog)
-    {
+    public void setDog(Dog dog) {
         this.dog = dog;
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "Person{" +
                 "lastName='" + lastName + '\'' +
                 ", age=" + age +

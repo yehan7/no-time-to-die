@@ -14,8 +14,7 @@ import lombok.experimental.Accessors;
 @AllArgsConstructor
 @NoArgsConstructor
 @Accessors(chain = true)
-public class User
-{
+public class User {
 
     private Integer id;
 

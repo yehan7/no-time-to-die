@@ -10,8 +10,7 @@ import java.util.List;
  * Time: 16:34 2020/1/24
  * Description:
  */
-public interface PersonMapper
-{
+public interface PersonMapper {
 
     List<PersonDetail> getAllPerson();
 }

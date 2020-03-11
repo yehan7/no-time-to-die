@@ -10,22 +10,18 @@ import java.net.URL;
 /**
  * 根据IP地址获取详细的地域信息
  */
-public class AddressUtils
-{
+public class AddressUtils {
     /**
      * @param: ip  ip
      * @return: java.lang.String
      */
-    public static String getAddresses(String ip) throws UnsupportedEncodingException
-    {
+    public static String getAddresses(String ip) throws UnsupportedEncodingException {
         String urlStr = "http://ip.taobao.com/service/getIpInfo.php";
         String returnStr = getResult(urlStr, ip);
-        if (returnStr != null)
-        {
+        if (returnStr != null) {
             // 处理返回的省市区信息
             String[] temp = returnStr.split(",");
-            if (temp.length < 3)
-            {
+            if (temp.length < 3) {
                 return "0";// 无效IP，局域网测试
             }
             String region = (temp[5].split(":"))[1].replaceAll("\"", "");
@@ -37,10 +33,8 @@ public class AddressUtils
             String city = "";
             String county = "";
             String isp = "";
-            for (int i = 0; i < temp.length; i++)
-            {
-                switch (i)
-                {
+            for (int i = 0; i < temp.length; i++) {
+                switch (i) {
                     case 1:
                         country = (temp[i].split(":"))[2].replaceAll("\"", "");
                         country = decodeUnicode(country);// 国家
@@ -68,8 +62,7 @@ public class AddressUtils
                 }
             }
             String address = region + city;
-            if (StringUtils.isBlank(address))
-            {
+            if (StringUtils.isBlank(address)) {
                 address = "地球村";
             }
             return address;
@@ -82,12 +75,10 @@ public class AddressUtils
      * @param: ip  ip
      * @return: java.lang.String
      */
-    private static String getResult(String urlStr, String ip)
-    {
+    private static String getResult(String urlStr, String ip) {
         URL url = null;
         HttpURLConnection connection = null;
-        try
-        {
+        try {
             url = new URL(urlStr);
             connection = (HttpURLConnection) url.openConnection();// 新建连接实例
             /**
@@ -108,21 +99,15 @@ public class AddressUtils
             // ,以BufferedReader流来读取
             StringBuffer buffer = new StringBuffer();
             String line = "";
-            while ((line = reader.readLine()) != null)
-            {
+            while ((line = reader.readLine()) != null) {
                 buffer.append(line);
             }
             reader.close();
             return buffer.toString();
-        }
-        catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
-        }
-        finally
-        {
-            if (connection != null)
-            {
+        } finally {
+            if (connection != null) {
                 connection.disconnect();// 关闭连接
             }
         }
@@ -135,25 +120,19 @@ public class AddressUtils
      * @param theString
      * @return
      */
-    public static String decodeUnicode(String theString)
-    {
+    public static String decodeUnicode(String theString) {
         char aChar;
         int len = theString.length();
         StringBuffer outBuffer = new StringBuffer(len);
-        for (int x = 0; x < len; )
-        {
+        for (int x = 0; x < len; ) {
             aChar = theString.charAt(x++);
-            if (aChar == '\\')
-            {
+            if (aChar == '\\') {
                 aChar = theString.charAt(x++);
-                if (aChar == 'u')
-                {
+                if (aChar == 'u') {
                     int value = 0;
-                    for (int i = 0; i < 4; i++)
-                    {
+                    for (int i = 0; i < 4; i++) {
                         aChar = theString.charAt(x++);
-                        switch (aChar)
-                        {
+                        switch (aChar) {
                             case '0':
                             case '1':
                             case '2':
@@ -187,30 +166,19 @@ public class AddressUtils
                         }
                     }
                     outBuffer.append((char) value);
-                }
-                else
-                {
-                    if (aChar == 't')
-                    {
+                } else {
+                    if (aChar == 't') {
                         aChar = '\t';
-                    }
-                    else if (aChar == 'r')
-                    {
+                    } else if (aChar == 'r') {
                         aChar = '\r';
-                    }
-                    else if (aChar == 'n')
-                    {
+                    } else if (aChar == 'n') {
                         aChar = '\n';
-                    }
-                    else if (aChar == 'f')
-                    {
+                    } else if (aChar == 'f') {
                         aChar = '\f';
                     }
                     outBuffer.append(aChar);
                 }
-            }
-            else
-            {
+            } else {
                 outBuffer.append(aChar);
             }
         }
@@ -226,14 +194,12 @@ public class AddressUtils
      * @Date 2017年7月31日 更新日志
      * 2017年7月31日  科帮网 首次创建
      */
-    public static String getIpAddr(HttpServletRequest request)
-    {
+    public static String getIpAddr(HttpServletRequest request) {
         String ip = request.getHeader("X-Real-IP");
         if (!StringUtils.isBlank(ip) && !"unknown".equalsIgnoreCase(ip))
             return ip;
         ip = request.getHeader("X-Forwarded-For");
-        if (!StringUtils.isBlank(ip) && !"unknown".equalsIgnoreCase(ip))
-        {
+        if (!StringUtils.isBlank(ip) && !"unknown".equalsIgnoreCase(ip)) {
             int index = ip.indexOf(',');
             if (index != -1)
                 return ip.substring(0, index);

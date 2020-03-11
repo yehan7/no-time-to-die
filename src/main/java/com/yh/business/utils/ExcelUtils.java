@@ -18,8 +18,7 @@ import java.text.SimpleDateFormat;
  * Time: 19:22 2020/2/6
  * Description:
  */
-public class ExcelUtils
-{
+public class ExcelUtils {
 
     private static Logger LOGGER = LoggerFactory.getLogger(ExcelUtils.class);
 
@@ -30,17 +29,13 @@ public class ExcelUtils
      * @param: filePath  filePath
      * @return: org.apache.poi.xssf.usermodel.XSSFWorkbook
      */
-    public static XSSFWorkbook getWorkbookByPath(String filePath)
-    {
+    public static XSSFWorkbook getWorkbookByPath(String filePath) {
         FileInputStream fis;
         XSSFWorkbook workbook = null;
-        try
-        {
+        try {
             fis = new FileInputStream(filePath);
             workbook = new XSSFWorkbook(fis);
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             LOGGER.error("ExcelUtils getWorkbook error", e);
         }
         return workbook;
@@ -54,17 +49,14 @@ public class ExcelUtils
      * @return: java.lang.String
      */
     //获取单元格各类型值，返回字符串类型
-    public static String getCellValueByCell(Cell cell)
-    {
+    public static String getCellValueByCell(Cell cell) {
         //判断是否为null或空串
-        if (cell == null || cell.toString().trim().equals(""))
-        {
+        if (cell == null || cell.toString().trim().equals("")) {
             return "空值";
         }
         String cellValue = "";
         CellType cellType = cell.getCellType();
-        switch (cellType)
-        {
+        switch (cellType) {
             case STRING: //字符串类型
                 cellValue = cell.getStringCellValue().trim();
                 cellValue = StringUtils.isEmpty(cellValue) ? "" : cellValue;
@@ -76,12 +68,9 @@ public class ExcelUtils
                 cellValue = cell.getCellFormula();
                 break;
             case NUMERIC: //数值类型
-                if (HSSFDateUtil.isCellDateFormatted(cell))
-                {  //判断日期类型
+                if (HSSFDateUtil.isCellDateFormatted(cell)) {  //判断日期类型
                     cellValue = new SimpleDateFormat("yyyy-MM-dd").format(cell.getDateCellValue());
-                }
-                else
-                {  //否
+                } else {  //否
                     cellValue = new DecimalFormat("#.######").format(cell.getNumericCellValue());
                 }
                 break;

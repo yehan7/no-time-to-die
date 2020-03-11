@@ -8,16 +8,13 @@ import java.util.concurrent.locks.ReentrantLock;
  * @Since: YH007
  * @Date: 2020/3/6
  */
-public class TakeTicketsLockDemo
-{
+public class TakeTicketsLockDemo {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
 
         Tickets tickets = new Tickets();
 
-        for (int i = 0; i < 1000; i++)
-        {
+        for (int i = 0; i < 1000; i++) {
             new Thread(() ->
             {
                 tickets.take();
@@ -27,28 +24,22 @@ public class TakeTicketsLockDemo
 }
 
 
-class Tickets
-{
+class Tickets {
     private int num = 100;
 
     private Lock lock = new ReentrantLock();
 
-    public void take()
-    {
+    public void take() {
         lock.lock();
 
-        try
-        {
-            while (num == 0)
-            {
+        try {
+            while (num == 0) {
                 System.out.println("没票了");
                 return;
             }
             System.out.println(Thread.currentThread().getName() + "抢到了第" + num + "张票！");
             num--;
-        }
-        finally
-        {
+        } finally {
 
             lock.unlock();
 

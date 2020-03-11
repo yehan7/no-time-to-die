@@ -8,11 +8,9 @@ import java.util.concurrent.ConcurrentHashMap;
  * @Since: YH007
  * @Date: 2020/3/6
  */
-public class UnsafeList
-{
+public class UnsafeList {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
 
 
         Map<Object, Object> map = new ConcurrentHashMap<>();

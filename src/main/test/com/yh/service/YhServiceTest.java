@@ -44,12 +44,10 @@ import java.util.concurrent.TimeUnit;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class YhServiceTest
-{
+public class YhServiceTest {
 
     @Test
-    public void test1()
-    {
+    public void test1() {
 
         ConditionInVo conditionInVo = new ConditionInVo();
         conditionInVo.setName("yehan");
@@ -57,21 +55,17 @@ public class YhServiceTest
 
         String url = "http://localhost:8080/api/getDetail";
         Map<String, Object> body = CommonUtils.object2Map(conditionInVo);
-        try
-        {
+        try {
             String s = HttpUtils.doHttpPost(url, null, null, body);
             JSONObject jsonObject = JSON.parseObject(s);
             String resultCode = (String) jsonObject.get("resultCode");
             ResultOutVo data = (ResultOutVo) jsonObject.get("data");
             String phone = data.getPhone();
-            if ("200".equals(resultCode))
-            {
+            if ("200".equals(resultCode)) {
                 System.out.println(phone);
             }
 
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -84,15 +78,13 @@ public class YhServiceTest
     RedisUtils redisUtils;
 
     @Test
-    public void test2() throws Exception
-    {
+    public void test2() throws Exception {
 
         /*List<PersonDetail> allPerson = personMapper.getAllPerson();
         System.out.println(allPerson);*/
         //readFile02("C:\\Users\\YH\\OneDrive\\桌面\\新建文本文档 (2).txt");
         boolean b = redisUtils.lSet("key", "value");
-        if (b)
-        {
+        if (b) {
             System.out.println("成功");
         }
     }
@@ -105,8 +97,7 @@ public class YhServiceTest
      * @return
      * @throws IOException
      */
-    public static List<String> readFile02(String path) throws IOException
-    {
+    public static List<String> readFile02(String path) throws IOException {
         // 使用一个字符串集合来存储文本中的路径 ，也可用String []数组
         List<String> list = new ArrayList<String>();
         FileInputStream fis = new FileInputStream(path);
@@ -114,11 +105,9 @@ public class YhServiceTest
         InputStreamReader isr = new InputStreamReader(fis, "UTF-8");
         BufferedReader br = new BufferedReader(isr);
         String line = "";
-        while ((line = br.readLine()) != null)
-        {
+        while ((line = br.readLine()) != null) {
             // 如果 t x t文件里的路径 不包含---字符串       这里是对里面的内容进行一个筛选
-            if (!line.matches("^\\+?[1-9][0-9]*$"))
-            {
+            if (!line.matches("^\\+?[1-9][0-9]*$")) {
                 list.add(line);
             }
         }
@@ -126,8 +115,7 @@ public class YhServiceTest
         isr.close();
         fis.close();
         BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\YH\\OneDrive\\桌面\\b.txt"));
-        for (String s : list)
-        {
+        for (String s : list) {
             bw.write(s);
             bw.newLine();
             bw.flush();
@@ -140,8 +128,7 @@ public class YhServiceTest
     private RedisTemplate<String, Object> redisTemplate;
 
     @Test
-    public void test4()
-    {
+    public void test4() {
         redisTemplate.opsForValue();
         RedisProperties.Jedis jedis = new RedisProperties.Jedis();
 
@@ -158,8 +145,7 @@ public class YhServiceTest
 
 
     @Test
-    public void contextLoads()
-    {
+    public void contextLoads() {
         //System.out.println();
         //日志的级别；
         //由低到高 trace<debug<info<warn<error
@@ -176,14 +162,12 @@ public class YhServiceTest
     private Person person;
 
     @Test
-    public void test11()
-    {
+    public void test11() {
         LOGGER.info("person:" + person);
     }
 
     @Test
-    public void test12() throws UnsupportedEncodingException
-    {
+    public void test12() throws UnsupportedEncodingException {
         String address = AddressUtils.getAddresses("192.168.1.103");
         LOGGER.info("获取到的ip的地区为：" + address);
     }
@@ -207,8 +191,7 @@ public class YhServiceTest
     private YhService yhService;
 
     @Test
-    public void test13()
-    {
+    public void test13() {
         yhService.get();
         String json = "{\"name\": \"yh\", \"id\": \"007\"}";
     }
@@ -217,8 +200,7 @@ public class YhServiceTest
     private RabbitTemplate rabbitTemplate;
 
     @Test
-    public void testAMQP()
-    {
+    public void testAMQP() {
 
         //rabbitTemplate.send(exchange, routeKey, message);
         String exchange = "exchange.direct";
@@ -231,8 +213,7 @@ public class YhServiceTest
 
 
     @Test
-    public void testAMQPReceive()
-    {
+    public void testAMQPReceive() {
         Object o = rabbitTemplate.receiveAndConvert("yh.news");
         System.out.println(o.getClass());
         System.out.println(o);
@@ -242,33 +223,25 @@ public class YhServiceTest
     private AmqpAdmin amqpAdmin;
 
     @Test
-    public void testAMQPAdmin()
-    {
+    public void testAMQPAdmin() {
         amqpAdmin.declareExchange(new DirectExchange("admin.exchange"));
     }
 
     @Test
-    public void testThreadPool()
-    {
+    public void testThreadPool() {
         ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(3, 10, 60,
                 TimeUnit.SECONDS, new ArrayBlockingQueue<>(10), Executors.defaultThreadFactory());
-        try
-        {
-            for (int i = 0; i < 10; i++)
-            {
+        try {
+            for (int i = 0; i < 10; i++) {
                 int finalI = i;
-                poolExecutor.execute(new Runnable()
-                {
+                poolExecutor.execute(new Runnable() {
                     @Override
-                    public void run()
-                    {
+                    public void run() {
                         System.out.println("当前是线程" + finalI + "：" + Thread.currentThread());
                     }
                 });
             }
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             LOGGER.error("系统异常：", e);
         }
     }
@@ -281,10 +254,8 @@ public class YhServiceTest
     XxService xxService;
 
     @Test
-    public void test90()
-    {
-        for (int i = 0; i < 1000; i++)
-        {
+    public void test90() {
+        for (int i = 0; i < 1000; i++) {
             xxService.testPool();
             //asyncTask.doTest();
 
@@ -298,8 +269,7 @@ public class YhServiceTest
     private Cache cache;
 
     @Test
-    public void test888() throws Exception
-    {
+    public void test888() throws Exception {
 
 
         JobDetail jobDetail = JobBuilder.newJob(TestTask.class).
@@ -314,16 +284,14 @@ public class YhServiceTest
 
 
     @Test
-    public void test000()
-    {
+    public void test000() {
         String value = (String) cache.getIfPresent("yh");
         System.out.println("value：" + value);
     }
 
 
     @Test
-    public void test111()
-    {
+    public void test111() {
 
         redisUtils.set("yh", "007");
 

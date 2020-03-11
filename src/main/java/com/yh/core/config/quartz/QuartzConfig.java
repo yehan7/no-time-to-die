@@ -11,8 +11,7 @@ import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 
 @Configuration
 @ConfigurationProperties(prefix = "quartz")
-public class QuartzConfig
-{
+public class QuartzConfig {
 
 
     @Autowired
@@ -22,8 +21,7 @@ public class QuartzConfig
 
 
     @Bean
-    public SchedulerFactoryBean schedulerFactoryBean()
-    {
+    public SchedulerFactoryBean schedulerFactoryBean() {
         SchedulerFactoryBean schedulerFactoryBean = new SchedulerFactoryBean();
         schedulerFactoryBean.setJobFactory(jobFactory);
        /* // 用于quartz集群,QuartzScheduler 启动时更新己存在的Job
@@ -36,10 +34,8 @@ public class QuartzConfig
     }
 
     @Bean
-    public Scheduler scheduler() throws SchedulerException
-    {
-        while (enable.equals("false"))
-        {
+    public Scheduler scheduler() throws SchedulerException {
+        while (enable.equals("false")) {
             return null;
         }
         Scheduler scheduler = schedulerFactoryBean().getScheduler();
@@ -55,13 +51,11 @@ public class QuartzConfig
         return scheduler;
     }
 
-    public String getEnable()
-    {
+    public String getEnable() {
         return enable;
     }
 
-    public void setEnable(String enable)
-    {
+    public void setEnable(String enable) {
         this.enable = enable;
     }
 }

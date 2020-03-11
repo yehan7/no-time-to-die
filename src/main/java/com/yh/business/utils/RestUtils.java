@@ -18,20 +18,17 @@ import java.security.NoSuchAlgorithmException;
 import java.security.cert.X509Certificate;
 
 
-public class RestUtils
-{
+public class RestUtils {
 
     /**
      * 获取处理https的restTemplate
      *
      * @return RestTemplate
      */
-    public static RestTemplate getRestTemplate()
-    {
+    public static RestTemplate getRestTemplate() {
         HttpComponentsClientHttpRequestFactory httpRequestFactory = null;
         TrustStrategy acceptingTrustStrategy = (X509Certificate[] chain, String authType) -> true;
-        try
-        {
+        try {
             SSLContext sslContext =
                     SSLContexts.custom().loadTrustMaterial(null, acceptingTrustStrategy).build();
             SSLConnectionSocketFactory socketFactory =
@@ -39,17 +36,11 @@ public class RestUtils
             CloseableHttpClient httpClient = HttpClients.custom().setSSLSocketFactory(socketFactory).build();
             httpRequestFactory = new HttpComponentsClientHttpRequestFactory(httpClient);
 
-        }
-        catch (NoSuchAlgorithmException e)
-        {
+        } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
-        }
-        catch (KeyManagementException e)
-        {
+        } catch (KeyManagementException e) {
             e.printStackTrace();
-        }
-        catch (KeyStoreException e)
-        {
+        } catch (KeyStoreException e) {
             e.printStackTrace();
         }
         return new RestTemplate(httpRequestFactory);
