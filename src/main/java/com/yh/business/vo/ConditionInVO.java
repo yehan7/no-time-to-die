@@ -6,7 +6,7 @@ package com.yh.business.vo;
  * Time: 19:54 2020/1/22
  * Description:
  */
-public class ConditionInVo {
+public class ConditionInVO {
     private String name;
     private String pwd;
 

@@ -1,8 +1,8 @@
 package com.yh.business.controller;
 
 
-import com.yh.business.vo.ConditionInVo;
-import com.yh.business.vo.ResultOutVo;
+import com.yh.business.vo.ConditionInVO;
+import com.yh.business.vo.ResultOutVO;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,12 +23,12 @@ public class YhController {
 
 
     @PostMapping("/getDetail")
-    public Map<String, Object> get(@RequestBody ConditionInVo conditionIn) {
+    public Map<String, Object> get(@RequestBody ConditionInVO conditionIn) {
 
         Map<String, Object> resultMap = new HashMap<>();
 
         if ("yehan".equals(conditionIn.getName()) && "007".equals(conditionIn.getPwd())) {
-            ResultOutVo resultOutVo = new ResultOutVo();
+            ResultOutVO resultOutVo = new ResultOutVO();
             resultOutVo.setAccount("叶晗");
             resultOutVo.setPhone("17702703197");
             resultOutVo.setPart("中国区");

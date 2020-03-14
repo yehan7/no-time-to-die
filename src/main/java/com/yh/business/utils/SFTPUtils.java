@@ -144,6 +144,11 @@ public class SFTPUtils {
 
     }
 
+    public void upload(File uploadFile) throws FileNotFoundException, SftpException {
+
+        upload(null, uploadFile.getName(), new FileInputStream(uploadFile));
+    }
+
 
     /**
      * 上传单个文件

@@ -13,8 +13,8 @@ import com.yh.business.utils.AddressUtils;
 import com.yh.business.utils.CommonUtils;
 import com.yh.business.utils.HttpUtils;
 import com.yh.business.utils.RedisUtils;
-import com.yh.business.vo.ConditionInVo;
-import com.yh.business.vo.ResultOutVo;
+import com.yh.business.vo.ConditionInVO;
+import com.yh.business.vo.ResultOutVO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.quartz.*;
@@ -49,7 +49,7 @@ public class YhServiceTest {
     @Test
     public void test1() {
 
-        ConditionInVo conditionInVo = new ConditionInVo();
+        ConditionInVO conditionInVo = new ConditionInVO();
         conditionInVo.setName("yehan");
         conditionInVo.setPwd("007");
 
@@ -59,7 +59,7 @@ public class YhServiceTest {
             String s = HttpUtils.doHttpPost(url, null, null, body);
             JSONObject jsonObject = JSON.parseObject(s);
             String resultCode = (String) jsonObject.get("resultCode");
-            ResultOutVo data = (ResultOutVo) jsonObject.get("data");
+            ResultOutVO data = (ResultOutVO) jsonObject.get("data");
             String phone = data.getPhone();
             if ("200".equals(resultCode)) {
                 System.out.println(phone);

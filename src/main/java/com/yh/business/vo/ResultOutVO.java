@@ -6,7 +6,7 @@ package com.yh.business.vo;
  * Time: 20:57 2020/1/22
  * Description:
  */
-public class ResultOutVo {
+public class ResultOutVO {
     private String account;
     private String phone;
     private String part;
