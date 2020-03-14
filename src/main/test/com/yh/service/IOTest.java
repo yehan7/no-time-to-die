@@ -1,17 +1,27 @@
 package com.yh.service;
 
+import com.alibaba.fastjson.JSONObject;
+import com.jcraft.jsch.ChannelSftp;
+import com.jcraft.jsch.SftpException;
+import com.yh.business.entity.SFTPConfig;
 import com.yh.business.utils.ExcelUtils;
+import com.yh.business.utils.SFTPUtils;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
 import org.apache.poi.xssf.usermodel.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Collections;
+import java.util.Vector;
 
 ;
 
@@ -73,4 +83,41 @@ public class IOTest {
 
     }
 
+    @Autowired
+    static SFTPConfig sftpConfig;
+
+    @Autowired
+    SFTPUtils sftpUtils;
+
+    @Test
+    public void ftpUpload() throws FileNotFoundException, SftpException {
+
+       /* File file = new File("C:\\Users\\YH\\OneDrive\\桌面\\mall.sql");
+        sftpUtils.getDefultChannelSftp().upload(null, file);*/
+
+        /*Vector<?> objects = sftpUtils.getDefultChannelSftp().listFiles("/root/temp");
+        objects.forEach(System.out::println);
+*/
+        //File file = new File("C:\\Users\\YH\\OneDrive\\桌面\\linux启动命令.txt");
+        //boolean b = ftpUtils.uploadFile(file);
+
+
+     /*   Vector<ChannelSftp.LsEntry> lsEntries = sftpUtils.getDefultChannelSftp().listFiles("/root/temp");
+
+        for (ChannelSftp.LsEntry entry : lsEntries){
+            String fileName = entry.getFilename();
+            System.out.println(fileName);
+        }*/
+
+        //sftpUtils.getDefultChannelSftp().download("/root/temp", "武汉住房公积金接收函.jpg", "C:\\Users\\YH\\OneDrive\\桌面\\a.jpg");
+
+        sftpUtils.getDefultChannelSftp().delete("/root/temp", "mall.sql");
+    }
+
+
+    @Test
+    public void ffsfs() {
+        String host = sftpConfig.getHost();
+        System.out.println(host);
+    }
 }

@@ -9,6 +9,11 @@
       "name": "quartz",
       "type": "com.yh.core.config.quartz.QuartzConfig",
       "sourceType": "com.yh.core.config.quartz.QuartzConfig"
+    },
+    {
+      "name": "sftp",
+      "type": "com.yh.business.entity.SFTPConfig",
+      "sourceType": "com.yh.business.entity.SFTPConfig"
     }
   ],
   "properties": [
@@ -51,6 +56,31 @@
       "name": "quartz.enable",
       "type": "java.lang.String",
       "sourceType": "com.yh.core.config.quartz.QuartzConfig"
+    },
+    {
+      "name": "sftp.host",
+      "type": "java.lang.String",
+      "sourceType": "com.yh.business.entity.SFTPConfig"
+    },
+    {
+      "name": "sftp.password",
+      "type": "java.lang.String",
+      "sourceType": "com.yh.business.entity.SFTPConfig"
+    },
+    {
+      "name": "sftp.path",
+      "type": "java.lang.String",
+      "sourceType": "com.yh.business.entity.SFTPConfig"
+    },
+    {
+      "name": "sftp.port",
+      "type": "java.lang.Integer",
+      "sourceType": "com.yh.business.entity.SFTPConfig"
+    },
+    {
+      "name": "sftp.username",
+      "type": "java.lang.String",
+      "sourceType": "com.yh.business.entity.SFTPConfig"
     }
   ],
   "hints": []
