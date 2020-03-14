@@ -3,6 +3,8 @@ package com.yh.business.controller;
 import com.yh.business.utils.SFTPUtils;
 import com.yh.business.vo.CommonResult;
 import com.yh.business.vo.ResultOutVO;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 
 /**
  * @Description:
@@ -34,66 +33,40 @@ public class SFTPController {
 
 
     @PostMapping("/uploadfile")
-    public CommonResult uploadFile(@RequestParam("file") MultipartFile file, HttpServletRequest request) {
+    public CommonResult uploadFile(@RequestParam("file") MultipartFile multipartFile, HttpServletRequest request) {
 
         CommonResult result = new CommonResult();
+        SFTPUtils defultChannelSftp = null;
+        InputStream inputStream = null;
+        String tempFilePath = this.getClass().getResource("/").getPath() + File.separator + "temp" + File.separator;
         try {
             String path = request.getParameter("path");
-            File uploadFile = multipartFileToFile(file);
-            sftpUtils.getDefultChannelSftp().upload(path, uploadFile);
+            //上传的临时文件
+            File uploadFile = new File(tempFilePath + multipartFile.getOriginalFilename());
+            inputStream = multipartFile.getInputStream();
+            FileUtils.copyInputStreamToFile(inputStream, uploadFile);
+            //上传文件开始
+            defultChannelSftp = sftpUtils.getDefultChannelSftp();
+            defultChannelSftp.upload(path, uploadFile);
+            result.setResultCode("200");
+            result.setDesc("uploadfile success");
+            LOGGER.info("uploadfile success");
+            return result;
         } catch (Exception e) {
             LOGGER.error("uploadfile error", e);
             result.setResultCode("500");
             result.setDesc("uploadfile error");
             return result;
-        }
-        result.setResultCode("200");
-        result.setDesc("uploadfile success");
-        LOGGER.info("uploadfile success");
-        return result;
-    }
-
-
-    /**
-     * multipartFile转化成file
-     *
-     * @param file
-     * @return
-     */
-    public File multipartFileToFile(MultipartFile file) throws Exception {
-
-        File toFile = null;
-        if (file.equals("") || file.getSize() <= 0) {
-            file = null;
-        } else {
-            InputStream ins = null;
-            ins = file.getInputStream();
-            toFile = new File(file.getOriginalFilename());
-            inputStreamToFile(ins, toFile);
-            ins.close();
-        }
-        return toFile;
-    }
-
-
-    /**
-     * inputStreamToFile
-     * @param ins
-     * @param file
-     */
-    private void inputStreamToFile(InputStream ins, File file) {
-        try {
-            OutputStream os = new FileOutputStream(file);
-            int bytesRead = 0;
-            byte[] buffer = new byte[8192];
-            while ((bytesRead = ins.read(buffer, 0, 8192)) != -1) {
-                os.write(buffer, 0, bytesRead);
+        } finally {
+            try {
+                FileUtils.deleteDirectory(new File(tempFilePath));
+            } catch (IOException e) {
+                LOGGER.error("删除零时文件夹失败:", e);
             }
-            os.close();
-            ins.close();
-        } catch (Exception e) {
-            e.printStackTrace();
+            IOUtils.closeQuietly(inputStream);
+            defultChannelSftp.disconnect();
         }
+
     }
 
 

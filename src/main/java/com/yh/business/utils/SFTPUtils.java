@@ -130,16 +130,20 @@ public class SFTPUtils {
      */
     public void upload(String directory, String sftpFileName, InputStream input) throws SftpException {
         try {
-            if (StringUtils.isEmpty(directory)) {
-                directory = "/root/temp";
-            }
-            sftp.cd(directory);
-        } catch (SftpException e) {
+            try {
+                if (StringUtils.isEmpty(directory)) {
+                    directory = "/root/temp";
+                }
+                sftp.cd(directory);
+            } catch (SftpException e) {
 
-            sftp.mkdir(directory);
-            sftp.cd(directory);
+                sftp.mkdir(directory);
+                sftp.cd(directory);
+            }
+            sftp.put(input, sftpFileName);
+        } finally {
+            IOUtils.closeQuietly(input);
         }
-        sftp.put(input, sftpFileName);
 
 
     }
