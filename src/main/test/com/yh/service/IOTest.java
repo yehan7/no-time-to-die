@@ -92,8 +92,8 @@ public class IOTest {
     @Test
     public void ftpUpload() throws FileNotFoundException, SftpException {
 
-       /* File file = new File("C:\\Users\\YH\\OneDrive\\桌面\\mall.sql");
-        sftpUtils.getDefultChannelSftp().upload(null, file);*/
+        File file = new File("C:\\Users\\YH\\OneDrive\\桌面\\mall.sql");
+        sftpUtils.getDefultChannelSftp().upload(null, file);
 
         /*Vector<?> objects = sftpUtils.getDefultChannelSftp().listFiles("/root/temp");
         objects.forEach(System.out::println);
@@ -117,7 +117,6 @@ public class IOTest {
 
     @Test
     public void ffsfs() {
-        String host = sftpConfig.getHost();
-        System.out.println(host);
+
     }
 }

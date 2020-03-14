@@ -130,17 +130,19 @@ public class SFTPUtils {
      */
     public void upload(String directory, String sftpFileName, InputStream input) throws SftpException {
         try {
+            LOGGER.info("uplaod cd directory" + directory);
             try {
                 if (StringUtils.isEmpty(directory)) {
                     directory = "/root/temp";
                 }
                 sftp.cd(directory);
             } catch (SftpException e) {
-
+                LOGGER.error("系统异常：", e);
                 sftp.mkdir(directory);
                 sftp.cd(directory);
             }
             sftp.put(input, sftpFileName);
+            LOGGER.info("上传成功");
         } finally {
             IOUtils.closeQuietly(input);
         }
@@ -161,6 +163,7 @@ public class SFTPUtils {
      * @param uploadFile 要上传的文件,包括路径
      */
     public void upload(String directory, File uploadFile) throws FileNotFoundException, SftpException {
+
 
         upload(directory, uploadFile.getName(), new FileInputStream(uploadFile));
     }

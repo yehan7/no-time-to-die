@@ -16,6 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
+import java.util.Date;
 
 /**
  * @Description:
@@ -35,18 +36,22 @@ public class SFTPController {
     @PostMapping("/uploadfile")
     public CommonResult uploadFile(@RequestParam("file") MultipartFile multipartFile, HttpServletRequest request) {
 
+        LOGGER.info("开始上传");
         CommonResult result = new CommonResult();
         SFTPUtils defultChannelSftp = null;
         InputStream inputStream = null;
-        String tempFilePath = this.getClass().getResource("/").getPath() + File.separator + "temp" + File.separator;
+        String tempFilePath = File.separator + "root" + File.separator + "temp"+ System.currentTimeMillis() + File.separator;
+        LOGGER.info("临时保存路径：" + tempFilePath);
         try {
             String path = request.getParameter("path");
+            LOGGER.info("要上传的路径：" + path);
             //上传的临时文件
             File uploadFile = new File(tempFilePath + multipartFile.getOriginalFilename());
             inputStream = multipartFile.getInputStream();
             FileUtils.copyInputStreamToFile(inputStream, uploadFile);
             //上传文件开始
             defultChannelSftp = sftpUtils.getDefultChannelSftp();
+            LOGGER.info("上传的文件" + uploadFile.getAbsolutePath());
             defultChannelSftp.upload(path, uploadFile);
             result.setResultCode("200");
             result.setDesc("uploadfile success");
@@ -60,11 +65,12 @@ public class SFTPController {
         } finally {
             try {
                 FileUtils.deleteDirectory(new File(tempFilePath));
+                LOGGER.info("删除文件夹成功：" + tempFilePath);
             } catch (IOException e) {
                 LOGGER.error("删除零时文件夹失败:", e);
             }
             IOUtils.closeQuietly(inputStream);
-            defultChannelSftp.disconnect();
+            //defultChannelSftp.disconnect();
         }
 
     }
