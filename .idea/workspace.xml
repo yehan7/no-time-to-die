@@ -31,17 +31,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06cc8d43-dca9-4e9f-8d81-e1c0f84257e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/yh007_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/business/utils/EncryptUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/singleton/type1/SingletonTest1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/singleton/type2/SingletonTest2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/singleton/type3/SingletonTest3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/singleton/type4/SingletonTest4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/singleton/type5/SingletonTest5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/singleton/type6/SingletonTest6.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yh/business/controller/SFTPController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yh/business/controller/SFTPController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yh/business/utils/SFTPUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yh/business/utils/SFTPUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/yh/service/IOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/yh/service/IOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <list id="8f3c2b32-0b85-4c1e-bc44-adf62054ef0a" name="ideaChangelist" comment="ideaChangelist" />
     <list id="01f741db-9462-4475-b87c-aba9a00b41c7" name="logChangelist" comment="logChangelist">
@@ -181,11 +178,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15143603" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -230,7 +227,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Spring Boot.YhAppRunApplication">
+  <component name="RunManager" selected="Application.SingletonTest5">
     <configuration name="CirclePrintLockDemo" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yh.demo.juc.lock.CirclePrintLockDemo" />
       <module name="yh007" />
@@ -257,12 +254,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SFTPUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.yh.business.utils.SFTPUtils" />
+    <configuration name="SingletonTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yh.demo.designpattern.singleton.type2.SingletonTest2" />
       <module name="yh007" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.yh.business.utils.*" />
+          <option name="PATTERN" value="com.yh.demo.designpattern.singleton.type2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingletonTest3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yh.demo.designpattern.singleton.type3.SingletonTest3" />
+      <module name="yh007" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yh.demo.designpattern.singleton.type3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingletonTest4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yh.demo.designpattern.singleton.type4.SingletonTest4" />
+      <module name="yh007" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yh.demo.designpattern.singleton.type4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingletonTest5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yh.demo.designpattern.singleton.type5.SingletonTest5" />
+      <module name="yh007" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yh.demo.designpattern.singleton.type5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingletonTest6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yh.demo.designpattern.singleton.type6.SingletonTest6" />
+      <module name="yh007" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yh.demo.designpattern.singleton.type6.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -283,74 +332,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IOTest.ffsfs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="yh007" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yh.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.yh.service" />
-      <option name="MAIN_CLASS_NAME" value="com.yh.service.IOTest" />
-      <option name="METHOD_NAME" value="ffsfs" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IOTest.ftpUpload" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="yh007" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yh.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.yh.service" />
-      <option name="MAIN_CLASS_NAME" value="com.yh.service.IOTest" />
-      <option name="METHOD_NAME" value="ftpUpload" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="YhServiceTest.testAMQP" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="yh007" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yh.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.yh.service" />
-      <option name="MAIN_CLASS_NAME" value="com.yh.service.YhServiceTest" />
-      <option name="METHOD_NAME" value="testAMQP" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="YhAppRunApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="yh007" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yh.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yh.YhAppRunApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.YhAppRunApplication" />
-        <item itemvalue="JUnit.IOTest.ftpUpload" />
-        <item itemvalue="JUnit.IOTest.ffsfs" />
-        <item itemvalue="Application.SFTPUtils" />
-        <item itemvalue="JUnit.YhServiceTest.testAMQP" />
+        <item itemvalue="Application.SingletonTest5" />
+        <item itemvalue="Application.SingletonTest6" />
+        <item itemvalue="Application.SingletonTest4" />
+        <item itemvalue="Application.SingletonTest3" />
+        <item itemvalue="Application.SingletonTest2" />
       </list>
     </recent_temporary>
   </component>
@@ -447,7 +435,12 @@
       <workItem from="1584161284081" duration="57000" />
       <workItem from="1584161525653" duration="2296000" />
       <workItem from="1584164564673" duration="150000" />
-      <workItem from="1584164749310" duration="18077000" />
+      <workItem from="1584164749310" duration="19642000" />
+      <workItem from="1584189309193" duration="483000" />
+      <workItem from="1584237387304" duration="3858000" />
+      <workItem from="1584254574116" duration="620000" />
+      <workItem from="1584331106837" duration="8062000" />
+      <workItem from="1584423437259" duration="721000" />
     </task>
     <task id="LOCAL-00001">
       <created>1581132573192</created>
@@ -631,7 +624,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584166985085</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="工具类补充">
+      <created>1584186573901</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1584186573901</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -691,10 +691,14 @@
       <screen x="0" y="0" width="1407" height="751" />
     </state>
     <state x="551" y="265" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1407.751@0.0.1407.751" timestamp="1581482004093" />
-    <state x="358" y="86" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583899967907">
+    <state x="358" y="86" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1584189283676">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
-    <state x="358" y="86" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1355.722@0.0.1355.722" timestamp="1583899967907" />
+    <state x="358" y="86" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1355.722@0.0.1355.722" timestamp="1584189283676" />
+    <state x="355" y="286" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1584362938685">
+      <screen x="0" y="0" width="1355" height="722" />
+    </state>
+    <state x="355" y="286" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1355.722@0.0.1355.722" timestamp="1584362938685" />
     <state x="408" y="107" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582780298888">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
@@ -703,10 +707,10 @@
       <screen x="0" y="0" width="1355" height="722" />
     </state>
     <state x="433" y="62" key="#xdebugger.evaluate/0.0.1355.722@0.0.1355.722" timestamp="1584158433818" />
-    <state x="304" y="0" key="CommitChangelistDialog2" timestamp="1584166983968">
+    <state x="304" y="0" key="CommitChangelistDialog2" timestamp="1584186568931">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
-    <state x="304" y="0" key="CommitChangelistDialog2/0.0.1355.722@0.0.1355.722" timestamp="1584166983968" />
+    <state x="304" y="0" key="CommitChangelistDialog2/0.0.1355.722@0.0.1355.722" timestamp="1584186568931" />
     <state x="316" y="0" key="CommitChangelistDialog2/0.0.1407.751@0.0.1407.751" timestamp="1582383084750" />
     <state width="399" height="457" key="DebuggerActiveHint" timestamp="1584158423383">
       <screen x="0" y="0" width="1355" height="722" />
@@ -721,62 +725,62 @@
       <screen x="0" y="0" width="1355" height="722" />
     </state>
     <state x="458" y="102" key="FileChooserDialogImpl/0.0.1355.722@0.0.1355.722" timestamp="1584164611611" />
-    <state width="1310" height="369" key="GridCell.Tab.0.bottom" timestamp="1584186548065">
+    <state width="1310" height="368" key="GridCell.Tab.0.bottom" timestamp="1584423509098">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
-    <state width="1310" height="369" key="GridCell.Tab.0.bottom/0.0.1355.722@0.0.1355.722" timestamp="1584186548065" />
+    <state width="1310" height="368" key="GridCell.Tab.0.bottom/0.0.1355.722@0.0.1355.722" timestamp="1584423509098" />
     <state width="1363" height="490" key="GridCell.Tab.0.bottom/0.0.1407.751@0.0.1407.751" timestamp="1582383091142" />
-    <state width="1310" height="369" key="GridCell.Tab.0.center" timestamp="1584186548064">
+    <state width="1310" height="368" key="GridCell.Tab.0.center" timestamp="1584423509098">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
-    <state width="1310" height="369" key="GridCell.Tab.0.center/0.0.1355.722@0.0.1355.722" timestamp="1584186548064" />
+    <state width="1310" height="368" key="GridCell.Tab.0.center/0.0.1355.722@0.0.1355.722" timestamp="1584423509098" />
     <state width="1363" height="490" key="GridCell.Tab.0.center/0.0.1407.751@0.0.1407.751" timestamp="1582383091142" />
-    <state width="1310" height="369" key="GridCell.Tab.0.left" timestamp="1584186548064">
+    <state width="1310" height="368" key="GridCell.Tab.0.left" timestamp="1584423509097">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
-    <state width="1310" height="369" key="GridCell.Tab.0.left/0.0.1355.722@0.0.1355.722" timestamp="1584186548064" />
+    <state width="1310" height="368" key="GridCell.Tab.0.left/0.0.1355.722@0.0.1355.722" timestamp="1584423509097" />
     <state width="1363" height="490" key="GridCell.Tab.0.left/0.0.1407.751@0.0.1407.751" timestamp="1582383091142" />
-    <state width="1310" height="369" key="GridCell.Tab.0.right" timestamp="1584186548064">
+    <state width="1310" height="368" key="GridCell.Tab.0.right" timestamp="1584423509098">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
-    <state width="1310" height="369" key="GridCell.Tab.0.right/0.0.1355.722@0.0.1355.722" timestamp="1584186548064" />
+    <state width="1310" height="368" key="GridCell.Tab.0.right/0.0.1355.722@0.0.1355.722" timestamp="1584423509098" />
     <state width="1363" height="490" key="GridCell.Tab.0.right/0.0.1407.751@0.0.1407.751" timestamp="1582383091142" />
-    <state width="1310" height="369" key="GridCell.Tab.1.bottom" timestamp="1584185995912">
+    <state width="1310" height="253" key="GridCell.Tab.1.bottom" timestamp="1584189288321">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
-    <state width="1310" height="369" key="GridCell.Tab.1.bottom/0.0.1355.722@0.0.1355.722" timestamp="1584185995912" />
+    <state width="1310" height="253" key="GridCell.Tab.1.bottom/0.0.1355.722@0.0.1355.722" timestamp="1584189288321" />
     <state width="1150" height="490" key="GridCell.Tab.1.bottom/0.0.1407.751@0.0.1407.751" timestamp="1582383091140" />
-    <state width="1310" height="369" key="GridCell.Tab.1.center" timestamp="1584185995911">
+    <state width="1310" height="253" key="GridCell.Tab.1.center" timestamp="1584189288321">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
-    <state width="1310" height="369" key="GridCell.Tab.1.center/0.0.1355.722@0.0.1355.722" timestamp="1584185995911" />
+    <state width="1310" height="253" key="GridCell.Tab.1.center/0.0.1355.722@0.0.1355.722" timestamp="1584189288321" />
     <state width="1150" height="490" key="GridCell.Tab.1.center/0.0.1407.751@0.0.1407.751" timestamp="1582383091140" />
-    <state width="1310" height="369" key="GridCell.Tab.1.left" timestamp="1584185995911">
+    <state width="1310" height="253" key="GridCell.Tab.1.left" timestamp="1584189288321">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
-    <state width="1310" height="369" key="GridCell.Tab.1.left/0.0.1355.722@0.0.1355.722" timestamp="1584185995911" />
+    <state width="1310" height="253" key="GridCell.Tab.1.left/0.0.1355.722@0.0.1355.722" timestamp="1584189288321" />
     <state width="1150" height="490" key="GridCell.Tab.1.left/0.0.1407.751@0.0.1407.751" timestamp="1582383091140" />
-    <state width="1310" height="369" key="GridCell.Tab.1.right" timestamp="1584185995911">
+    <state width="1310" height="253" key="GridCell.Tab.1.right" timestamp="1584189288321">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
-    <state width="1310" height="369" key="GridCell.Tab.1.right/0.0.1355.722@0.0.1355.722" timestamp="1584185995911" />
+    <state width="1310" height="253" key="GridCell.Tab.1.right/0.0.1355.722@0.0.1355.722" timestamp="1584189288321" />
     <state width="1150" height="490" key="GridCell.Tab.1.right/0.0.1407.751@0.0.1407.751" timestamp="1582383091140" />
-    <state width="1310" height="253" key="GridCell.Tab.2.bottom" timestamp="1584179198675">
+    <state width="1310" height="253" key="GridCell.Tab.2.bottom" timestamp="1584189288321">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
-    <state width="1310" height="253" key="GridCell.Tab.2.bottom/0.0.1355.722@0.0.1355.722" timestamp="1584179198675" />
-    <state width="1310" height="253" key="GridCell.Tab.2.center" timestamp="1584179198675">
+    <state width="1310" height="253" key="GridCell.Tab.2.bottom/0.0.1355.722@0.0.1355.722" timestamp="1584189288321" />
+    <state width="1310" height="253" key="GridCell.Tab.2.center" timestamp="1584189288321">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
-    <state width="1310" height="253" key="GridCell.Tab.2.center/0.0.1355.722@0.0.1355.722" timestamp="1584179198675" />
-    <state width="1310" height="253" key="GridCell.Tab.2.left" timestamp="1584179198675">
+    <state width="1310" height="253" key="GridCell.Tab.2.center/0.0.1355.722@0.0.1355.722" timestamp="1584189288321" />
+    <state width="1310" height="253" key="GridCell.Tab.2.left" timestamp="1584189288321">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
-    <state width="1310" height="253" key="GridCell.Tab.2.left/0.0.1355.722@0.0.1355.722" timestamp="1584179198675" />
-    <state width="1310" height="253" key="GridCell.Tab.2.right" timestamp="1584179198675">
+    <state width="1310" height="253" key="GridCell.Tab.2.left/0.0.1355.722@0.0.1355.722" timestamp="1584189288321" />
+    <state width="1310" height="253" key="GridCell.Tab.2.right" timestamp="1584189288321">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
-    <state width="1310" height="253" key="GridCell.Tab.2.right/0.0.1355.722@0.0.1355.722" timestamp="1584179198675" />
+    <state width="1310" height="253" key="GridCell.Tab.2.right/0.0.1355.722@0.0.1355.722" timestamp="1584189288321" />
     <state x="208" y="16" key="Maven.ArtifactSearchDialog" timestamp="1583146048558">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
@@ -785,10 +789,10 @@
       <screen x="0" y="0" width="1407" height="751" />
     </state>
     <state x="534" y="86" key="RollbackChangesDialog/0.0.1407.751@0.0.1407.751" timestamp="1581688875934" />
-    <state x="68" y="8" width="1180" height="714" key="SettingsEditor" timestamp="1584180179536">
+    <state x="50" y="8" width="1180" height="714" key="SettingsEditor" timestamp="1584361915718">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
-    <state x="68" y="8" width="1180" height="714" key="SettingsEditor/0.0.1355.722@0.0.1355.722" timestamp="1584180179536" />
+    <state x="50" y="8" width="1180" height="714" key="SettingsEditor/0.0.1355.722@0.0.1355.722" timestamp="1584361915718" />
     <state x="108" y="23" width="1225" height="707" key="SettingsEditor/0.0.1407.751@0.0.1407.751" timestamp="1582381045474" />
     <state x="530" y="280" key="VCS.ChangelistChooser" timestamp="1582782491615">
       <screen x="0" y="0" width="1355" height="722" />
@@ -815,10 +819,10 @@
       <screen x="0" y="0" width="1355" height="722" />
     </state>
     <state x="376" y="90" width="603" height="542" key="find.popup/0.0.1355.722@0.0.1355.722" timestamp="1584165157762" />
-    <state x="411" y="152" key="git4idea.merge.GitPullDialog" timestamp="1584185034184">
+    <state x="411" y="152" key="git4idea.merge.GitPullDialog" timestamp="1584356916264">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
-    <state x="411" y="152" key="git4idea.merge.GitPullDialog/0.0.1355.722@0.0.1355.722" timestamp="1584185034184" />
+    <state x="411" y="152" key="git4idea.merge.GitPullDialog/0.0.1355.722@0.0.1355.722" timestamp="1584356916264" />
     <state x="364" y="174" key="run.anything.popup" timestamp="1583567826228">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
