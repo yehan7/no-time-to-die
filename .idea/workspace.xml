@@ -768,12 +768,12 @@
       <screen x="0" y="0" width="1355" height="722" />
     </state>
     <state x="433" y="62" key="#xdebugger.evaluate/0.0.1355.722@0.0.1355.722" timestamp="1584158433818" />
-    <state x="318" y="0" key="CommitChangelistDialog2" timestamp="1584506193426">
+    <state x="318" y="0" key="CommitChangelistDialog2" timestamp="1584507492741">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="304" y="0" key="CommitChangelistDialog2/0.0.1355.722@0.0.1355.722" timestamp="1584424166509" />
     <state x="316" y="0" key="CommitChangelistDialog2/0.0.1407.751@0.0.1407.751" timestamp="1582383084750" />
-    <state x="318" y="0" key="CommitChangelistDialog2/0.0.1418.759@0.0.1418.759" timestamp="1584506193426" />
+    <state x="318" y="0" key="CommitChangelistDialog2/0.0.1418.759@0.0.1418.759" timestamp="1584507492741" />
     <state width="399" height="457" key="DebuggerActiveHint" timestamp="1584158423383">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
@@ -870,10 +870,11 @@
     </state>
     <state x="530" y="280" key="VCS.ChangelistChooser/0.0.1355.722@0.0.1355.722" timestamp="1582782491615" />
     <state x="550" y="291" key="VCS.ChangelistChooser/0.0.1407.751@0.0.1407.751" timestamp="1581598814933" />
-    <state x="270" y="83" key="Vcs.Push.Dialog.v2" timestamp="1584424169942">
-      <screen x="0" y="0" width="1355" height="722" />
+    <state x="283" y="87" key="Vcs.Push.Dialog.v2" timestamp="1584507497204">
+      <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="270" y="83" key="Vcs.Push.Dialog.v2/0.0.1355.722@0.0.1355.722" timestamp="1584424169942" />
+    <state x="283" y="87" key="Vcs.Push.Dialog.v2/0.0.1418.759@0.0.1418.759" timestamp="1584507497204" />
     <state x="392" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1581744413168">
       <screen x="0" y="0" width="1407" height="751" />
     </state>

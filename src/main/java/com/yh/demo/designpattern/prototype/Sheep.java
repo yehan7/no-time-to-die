@@ -12,11 +12,8 @@ import java.io.*;
 public class Sheep implements Serializable, Cloneable {
 
     private String name;
-
     private String type;
-
     private int age;
-
     public Person friend;
 
     //重写克隆方法
