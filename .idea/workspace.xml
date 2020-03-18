@@ -31,6 +31,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06cc8d43-dca9-4e9f-8d81-e1c0f84257e7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/adapter/classadapter/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/adapter/classadapter/IVoltage5V.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/adapter/classadapter/Phone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/adapter/classadapter/Voltage220V.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/adapter/classadapter/VoltageAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/adapter/interfaceadapter/AbsAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/adapter/interfaceadapter/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/adapter/interfaceadapter/Interface4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/adapter/objectadapter/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/adapter/objectadapter/IVoltage5V.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/adapter/objectadapter/Phone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/adapter/objectadapter/Voltage220V.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/adapter/objectadapter/VoltageAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/builder/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/builder/CommonHouse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/builder/HighBuilding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/builder/House.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/builder/HouseBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/builder/HouseDirector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="8f3c2b32-0b85-4c1e-bc44-adf62054ef0a" name="ideaChangelist" comment="ideaChangelist" />
@@ -55,38 +75,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="PostgreSQL - postgres@182.92.129.244" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="PostgreSQL - postgres@182.92.129.244" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="PostgreSQL - postgres@182.92.129.244" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="PostgreSQL - postgres@182.92.129.244" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="PostgreSQL - postgres@182.92.129.244" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
@@ -122,13 +111,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="E:\workspace\yh007\.idea" />
-      </set>
-    </option>
-  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
@@ -142,11 +124,6 @@
         <option name="mavenHome" value="D:/Program Files/apache-maven-3.6.3" />
         <option name="userSettingsFile" value="D:\Program Files\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
     </option>
     <option name="enabledProfiles">
       <list>
@@ -200,7 +177,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/adapter" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -214,14 +191,16 @@
     <property name="project.structure.proportion" value="0.15143603" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.yh.service.entity.vo" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\workspace\yh007\src\main\resource" />
+      <recent name="E:\workspace\yh007\src" />
+      <recent name="E:\workspace\yh007\src\main\java" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.yh" />
@@ -229,20 +208,18 @@
       <recent name="com.yh.service.entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workspace\yh007\src\main\java\com\yh\demo\designpattern\adapter" />
+      <recent name="E:\workspace\yh007\src\main\java\com\yh\demo\designpattern\builder" />
       <recent name="E:\workspace\yh007\src\main\webapp\WEB-INF\lib" />
       <recent name="E:\workspace\yh007\src\main\java\com\yh\business" />
       <recent name="E:\workspace\yh007\src\main\java\com\yh\core" />
-      <recent name="E:\workspace\yh007\src" />
-      <recent name="E:\workspace\yh007\src\main\resource" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.yh.service.utils" />
       <recent name="com.yh.core.config" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\workspace\yh007\src\main\resource" />
-      <recent name="E:\workspace\yh007\src" />
-      <recent name="E:\workspace\yh007\src\main\java" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.yh.service.entity.vo" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -259,13 +236,52 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager" selected="Application.Client (3)">
     <configuration name="CirclePrintLockDemo" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yh.demo.juc.lock.CirclePrintLockDemo" />
       <module name="yh007" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.yh.demo.juc.lock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Client (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yh.demo.designpattern.builder.Client" />
+      <module name="yh007" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yh.demo.designpattern.builder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Client (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yh.demo.designpattern.adapter.interfaceadapter.Client" />
+      <module name="yh007" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yh.demo.designpattern.adapter.interfaceadapter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Client (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yh.demo.designpattern.adapter.objectadapter.Client" />
+      <module name="yh007" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yh.demo.designpattern.adapter.objectadapter.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -299,51 +315,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SingletonTest3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.yh.demo.designpattern.singleton.type3.SingletonTest3" />
-      <module name="yh007" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yh.demo.designpattern.singleton.type3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SingletonTest4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.yh.demo.designpattern.singleton.type4.SingletonTest4" />
-      <module name="yh007" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yh.demo.designpattern.singleton.type4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SingletonTest5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yh.demo.designpattern.singleton.type5.SingletonTest5" />
       <module name="yh007" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.yh.demo.designpattern.singleton.type5.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SingletonTest6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.yh.demo.designpattern.singleton.type6.SingletonTest6" />
-      <module name="yh007" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yh.demo.designpattern.singleton.type6.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -366,25 +343,13 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Client (3)" />
+        <item itemvalue="Application.Client (2)" />
+        <item itemvalue="Application.Client (1)" />
         <item itemvalue="Application.Client" />
         <item itemvalue="Application.SingletonTest5" />
-        <item itemvalue="Application.SingletonTest6" />
-        <item itemvalue="Application.SingletonTest4" />
-        <item itemvalue="Application.SingletonTest3" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SpringBootOptions">
     <option name="showAdditionalConfigNotification" value="false" />
@@ -487,7 +452,11 @@
       <workItem from="1584423437259" duration="916000" />
       <workItem from="1584425538361" duration="6000" />
       <workItem from="1584441961253" duration="615000" />
-      <workItem from="1584504556195" duration="3125000" />
+      <workItem from="1584504556195" duration="3361000" />
+      <workItem from="1584508265729" duration="14000" />
+      <workItem from="1584508343446" duration="155000" />
+      <workItem from="1584508517096" duration="988000" />
+      <workItem from="1584530653104" duration="4701000" />
     </task>
     <task id="LOCAL-00001">
       <created>1581132573192</created>
@@ -699,7 +668,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584507570698</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="工具类补充">
+      <created>1584507973759</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1584507973759</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -747,12 +723,12 @@
     </state>
     <state x="152" y="30" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1355.722@0.0.1355.722" timestamp="1584424286693" />
     <state x="158" y="31" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1407.751@0.0.1407.751" timestamp="1582382258727" />
-    <state x="513" y="86" key="#com.intellij.ide.util.MemberChooser" timestamp="1584506134602">
+    <state x="513" y="86" key="#com.intellij.ide.util.MemberChooser" timestamp="1584535126226">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="490" y="82" key="#com.intellij.ide.util.MemberChooser/0.0.1355.722@0.0.1355.722" timestamp="1584158852660" />
     <state x="509" y="85" key="#com.intellij.ide.util.MemberChooser/0.0.1407.751@0.0.1407.751" timestamp="1581685860964" />
-    <state x="513" y="86" key="#com.intellij.ide.util.MemberChooser/0.0.1418.759@0.0.1418.759" timestamp="1584506134602" />
+    <state x="513" y="86" key="#com.intellij.ide.util.MemberChooser/0.0.1418.759@0.0.1418.759" timestamp="1584535126226" />
     <state x="389" y="147" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1584180140887">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
@@ -777,12 +753,12 @@
       <screen x="0" y="0" width="1355" height="722" />
     </state>
     <state x="433" y="62" key="#xdebugger.evaluate/0.0.1355.722@0.0.1355.722" timestamp="1584158433818" />
-    <state x="318" y="0" key="CommitChangelistDialog2" timestamp="1584507569851">
+    <state x="318" y="0" key="CommitChangelistDialog2" timestamp="1584507972991">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="304" y="0" key="CommitChangelistDialog2/0.0.1355.722@0.0.1355.722" timestamp="1584424166509" />
     <state x="316" y="0" key="CommitChangelistDialog2/0.0.1407.751@0.0.1407.751" timestamp="1582383084750" />
-    <state x="318" y="0" key="CommitChangelistDialog2/0.0.1418.759@0.0.1418.759" timestamp="1584507569851" />
+    <state x="318" y="0" key="CommitChangelistDialog2/0.0.1418.759@0.0.1418.759" timestamp="1584507972991" />
     <state width="399" height="457" key="DebuggerActiveHint" timestamp="1584158423383">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
@@ -796,30 +772,30 @@
       <screen x="0" y="0" width="1355" height="722" />
     </state>
     <state x="458" y="102" key="FileChooserDialogImpl/0.0.1355.722@0.0.1355.722" timestamp="1584164611611" />
-    <state width="1372" height="329" key="GridCell.Tab.0.bottom" timestamp="1584507308598">
+    <state width="1372" height="329" key="GridCell.Tab.0.bottom" timestamp="1584536157256">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1310" height="368" key="GridCell.Tab.0.bottom/0.0.1355.722@0.0.1355.722" timestamp="1584424353155" />
     <state width="1363" height="490" key="GridCell.Tab.0.bottom/0.0.1407.751@0.0.1407.751" timestamp="1582383091142" />
-    <state width="1372" height="329" key="GridCell.Tab.0.bottom/0.0.1418.759@0.0.1418.759" timestamp="1584507308598" />
-    <state width="1372" height="329" key="GridCell.Tab.0.center" timestamp="1584507308597">
+    <state width="1372" height="329" key="GridCell.Tab.0.bottom/0.0.1418.759@0.0.1418.759" timestamp="1584536157256" />
+    <state width="1372" height="329" key="GridCell.Tab.0.center" timestamp="1584536157256">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1310" height="368" key="GridCell.Tab.0.center/0.0.1355.722@0.0.1355.722" timestamp="1584424353155" />
     <state width="1363" height="490" key="GridCell.Tab.0.center/0.0.1407.751@0.0.1407.751" timestamp="1582383091142" />
-    <state width="1372" height="329" key="GridCell.Tab.0.center/0.0.1418.759@0.0.1418.759" timestamp="1584507308597" />
-    <state width="1372" height="329" key="GridCell.Tab.0.left" timestamp="1584507308597">
+    <state width="1372" height="329" key="GridCell.Tab.0.center/0.0.1418.759@0.0.1418.759" timestamp="1584536157256" />
+    <state width="1372" height="329" key="GridCell.Tab.0.left" timestamp="1584536157255">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1310" height="368" key="GridCell.Tab.0.left/0.0.1355.722@0.0.1355.722" timestamp="1584424353155" />
     <state width="1363" height="490" key="GridCell.Tab.0.left/0.0.1407.751@0.0.1407.751" timestamp="1582383091142" />
-    <state width="1372" height="329" key="GridCell.Tab.0.left/0.0.1418.759@0.0.1418.759" timestamp="1584507308597" />
-    <state width="1372" height="329" key="GridCell.Tab.0.right" timestamp="1584507308598">
+    <state width="1372" height="329" key="GridCell.Tab.0.left/0.0.1418.759@0.0.1418.759" timestamp="1584536157255" />
+    <state width="1372" height="329" key="GridCell.Tab.0.right" timestamp="1584536157256">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state width="1310" height="368" key="GridCell.Tab.0.right/0.0.1355.722@0.0.1355.722" timestamp="1584424353155" />
     <state width="1363" height="490" key="GridCell.Tab.0.right/0.0.1407.751@0.0.1407.751" timestamp="1582383091142" />
-    <state width="1372" height="329" key="GridCell.Tab.0.right/0.0.1418.759@0.0.1418.759" timestamp="1584507308598" />
+    <state width="1372" height="329" key="GridCell.Tab.0.right/0.0.1418.759@0.0.1418.759" timestamp="1584536157256" />
     <state width="1310" height="253" key="GridCell.Tab.1.bottom" timestamp="1584189288321">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
@@ -868,22 +844,22 @@
       <screen x="0" y="0" width="1407" height="751" />
     </state>
     <state x="534" y="86" key="RollbackChangesDialog/0.0.1407.751@0.0.1407.751" timestamp="1581688875934" />
-    <state x="68" y="8" width="1180" height="714" key="SettingsEditor" timestamp="1584507933898">
+    <state x="68" y="8" width="1180" height="714" key="SettingsEditor" timestamp="1584536100953">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="50" y="8" width="1180" height="714" key="SettingsEditor/0.0.1355.722@0.0.1355.722" timestamp="1584361915718" />
     <state x="108" y="23" width="1225" height="707" key="SettingsEditor/0.0.1407.751@0.0.1407.751" timestamp="1582381045474" />
-    <state x="68" y="8" key="SettingsEditor/0.0.1418.759@0.0.1418.759" timestamp="1584507933898" />
+    <state x="68" y="8" key="SettingsEditor/0.0.1418.759@0.0.1418.759" timestamp="1584536100953" />
     <state x="530" y="280" key="VCS.ChangelistChooser" timestamp="1582782491615">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
     <state x="530" y="280" key="VCS.ChangelistChooser/0.0.1355.722@0.0.1355.722" timestamp="1582782491615" />
     <state x="550" y="291" key="VCS.ChangelistChooser/0.0.1407.751@0.0.1407.751" timestamp="1581598814933" />
-    <state x="283" y="87" key="Vcs.Push.Dialog.v2" timestamp="1584507573304">
+    <state x="283" y="87" key="Vcs.Push.Dialog.v2" timestamp="1584507980121">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="270" y="83" key="Vcs.Push.Dialog.v2/0.0.1355.722@0.0.1355.722" timestamp="1584424169942" />
-    <state x="283" y="87" key="Vcs.Push.Dialog.v2/0.0.1418.759@0.0.1418.759" timestamp="1584507573304" />
+    <state x="283" y="87" key="Vcs.Push.Dialog.v2/0.0.1418.759@0.0.1418.759" timestamp="1584507980121" />
     <state x="392" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1581744413168">
       <screen x="0" y="0" width="1407" height="751" />
     </state>
@@ -900,10 +876,11 @@
       <screen x="0" y="0" width="1355" height="722" />
     </state>
     <state x="376" y="90" width="603" height="542" key="find.popup/0.0.1355.722@0.0.1355.722" timestamp="1584165157762" />
-    <state x="411" y="152" key="git4idea.merge.GitPullDialog" timestamp="1584356916264">
-      <screen x="0" y="0" width="1355" height="722" />
+    <state x="430" y="160" key="git4idea.merge.GitPullDialog" timestamp="1584536253398">
+      <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="411" y="152" key="git4idea.merge.GitPullDialog/0.0.1355.722@0.0.1355.722" timestamp="1584356916264" />
+    <state x="430" y="160" key="git4idea.merge.GitPullDialog/0.0.1418.759@0.0.1418.759" timestamp="1584536253398" />
     <state x="364" y="174" key="run.anything.popup" timestamp="1583567826228">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
