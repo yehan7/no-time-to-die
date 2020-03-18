@@ -30,15 +30,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06cc8d43-dca9-4e9f-8d81-e1c0f84257e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/business/utils/EncryptUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/singleton/type1/SingletonTest1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/singleton/type2/SingletonTest2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/singleton/type3/SingletonTest3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/singleton/type4/SingletonTest4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/singleton/type5/SingletonTest5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/singleton/type6/SingletonTest6.java" afterDir="false" />
+    <list default="true" id="06cc8d43-dca9-4e9f-8d81-e1c0f84257e7" name="Default Changelist" comment="工具类补充">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/prototype/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/prototype/Sheep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yh/business/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yh/business/entity/Person.java" afterDir="false" />
     </list>
     <list id="8f3c2b32-0b85-4c1e-bc44-adf62054ef0a" name="ideaChangelist" comment="ideaChangelist" />
     <list id="01f741db-9462-4475-b87c-aba9a00b41c7" name="logChangelist" comment="logChangelist">
@@ -62,7 +60,38 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="PostgreSQL - postgres@182.92.129.244" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="PostgreSQL - postgres@182.92.129.244" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="PostgreSQL - postgres@182.92.129.244" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="PostgreSQL - postgres@182.92.129.244" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="PostgreSQL - postgres@182.92.129.244" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
@@ -97,6 +126,13 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="E:\workspace\yh007\.idea" />
+      </set>
+    </option>
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -134,6 +170,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
@@ -182,7 +219,7 @@
     <property name="project.structure.proportion" value="0.15143603" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -227,7 +264,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Application.SingletonTest5">
+  <component name="RunManager" selected="Application.Client">
     <configuration name="CirclePrintLockDemo" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yh.demo.juc.lock.CirclePrintLockDemo" />
       <module name="yh007" />
@@ -241,12 +278,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegexTest" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.yh.service.RegexTest" />
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yh.demo.designpattern.prototype.Client" />
       <module name="yh007" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.yh.service.*" />
+          <option name="PATTERN" value="com.yh.demo.designpattern.prototype.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -254,12 +291,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SingletonTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.yh.demo.designpattern.singleton.type2.SingletonTest2" />
+    <configuration name="RegexTest" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yh.service.RegexTest" />
       <module name="yh007" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.yh.demo.designpattern.singleton.type2.*" />
+          <option name="PATTERN" value="com.yh.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -334,13 +371,25 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Client" />
         <item itemvalue="Application.SingletonTest5" />
         <item itemvalue="Application.SingletonTest6" />
         <item itemvalue="Application.SingletonTest4" />
         <item itemvalue="Application.SingletonTest3" />
-        <item itemvalue="Application.SingletonTest2" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SpringBootOptions">
     <option name="showAdditionalConfigNotification" value="false" />
@@ -440,7 +489,10 @@
       <workItem from="1584237387304" duration="3858000" />
       <workItem from="1584254574116" duration="620000" />
       <workItem from="1584331106837" duration="8062000" />
-      <workItem from="1584423437259" duration="721000" />
+      <workItem from="1584423437259" duration="916000" />
+      <workItem from="1584425538361" duration="6000" />
+      <workItem from="1584441961253" duration="615000" />
+      <workItem from="1584504556195" duration="2595000" />
     </task>
     <task id="LOCAL-00001">
       <created>1581132573192</created>
@@ -631,7 +683,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584186573901</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="工具类补充">
+      <created>1584424168598</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1584424168598</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -674,15 +733,17 @@
       <screen x="0" y="0" width="1355" height="722" />
     </state>
     <state x="270" y="2" key="#Plugins/0.0.1355.722@0.0.1355.722" timestamp="1583924083544" />
-    <state x="158" y="31" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582382258727">
-      <screen x="0" y="0" width="1407" height="751" />
-    </state>
-    <state x="158" y="31" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1407.751@0.0.1407.751" timestamp="1582382258727" />
-    <state x="490" y="82" key="#com.intellij.ide.util.MemberChooser" timestamp="1584158852660">
+    <state x="152" y="30" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584424286693">
       <screen x="0" y="0" width="1355" height="722" />
+    </state>
+    <state x="152" y="30" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1355.722@0.0.1355.722" timestamp="1584424286693" />
+    <state x="158" y="31" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1407.751@0.0.1407.751" timestamp="1582382258727" />
+    <state x="513" y="86" key="#com.intellij.ide.util.MemberChooser" timestamp="1584506134602">
+      <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="490" y="82" key="#com.intellij.ide.util.MemberChooser/0.0.1355.722@0.0.1355.722" timestamp="1584158852660" />
     <state x="509" y="85" key="#com.intellij.ide.util.MemberChooser/0.0.1407.751@0.0.1407.751" timestamp="1581685860964" />
+    <state x="513" y="86" key="#com.intellij.ide.util.MemberChooser/0.0.1418.759@0.0.1418.759" timestamp="1584506134602" />
     <state x="389" y="147" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1584180140887">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
@@ -707,11 +768,12 @@
       <screen x="0" y="0" width="1355" height="722" />
     </state>
     <state x="433" y="62" key="#xdebugger.evaluate/0.0.1355.722@0.0.1355.722" timestamp="1584158433818" />
-    <state x="304" y="0" key="CommitChangelistDialog2" timestamp="1584186568931">
-      <screen x="0" y="0" width="1355" height="722" />
+    <state x="318" y="0" key="CommitChangelistDialog2" timestamp="1584506193426">
+      <screen x="0" y="0" width="1418" height="759" />
     </state>
-    <state x="304" y="0" key="CommitChangelistDialog2/0.0.1355.722@0.0.1355.722" timestamp="1584186568931" />
+    <state x="304" y="0" key="CommitChangelistDialog2/0.0.1355.722@0.0.1355.722" timestamp="1584424166509" />
     <state x="316" y="0" key="CommitChangelistDialog2/0.0.1407.751@0.0.1407.751" timestamp="1582383084750" />
+    <state x="318" y="0" key="CommitChangelistDialog2/0.0.1418.759@0.0.1418.759" timestamp="1584506193426" />
     <state width="399" height="457" key="DebuggerActiveHint" timestamp="1584158423383">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
@@ -725,26 +787,30 @@
       <screen x="0" y="0" width="1355" height="722" />
     </state>
     <state x="458" y="102" key="FileChooserDialogImpl/0.0.1355.722@0.0.1355.722" timestamp="1584164611611" />
-    <state width="1310" height="368" key="GridCell.Tab.0.bottom" timestamp="1584423509098">
-      <screen x="0" y="0" width="1355" height="722" />
+    <state width="1372" height="329" key="GridCell.Tab.0.bottom" timestamp="1584507308598">
+      <screen x="0" y="0" width="1418" height="759" />
     </state>
-    <state width="1310" height="368" key="GridCell.Tab.0.bottom/0.0.1355.722@0.0.1355.722" timestamp="1584423509098" />
+    <state width="1310" height="368" key="GridCell.Tab.0.bottom/0.0.1355.722@0.0.1355.722" timestamp="1584424353155" />
     <state width="1363" height="490" key="GridCell.Tab.0.bottom/0.0.1407.751@0.0.1407.751" timestamp="1582383091142" />
-    <state width="1310" height="368" key="GridCell.Tab.0.center" timestamp="1584423509098">
-      <screen x="0" y="0" width="1355" height="722" />
+    <state width="1372" height="329" key="GridCell.Tab.0.bottom/0.0.1418.759@0.0.1418.759" timestamp="1584507308598" />
+    <state width="1372" height="329" key="GridCell.Tab.0.center" timestamp="1584507308597">
+      <screen x="0" y="0" width="1418" height="759" />
     </state>
-    <state width="1310" height="368" key="GridCell.Tab.0.center/0.0.1355.722@0.0.1355.722" timestamp="1584423509098" />
+    <state width="1310" height="368" key="GridCell.Tab.0.center/0.0.1355.722@0.0.1355.722" timestamp="1584424353155" />
     <state width="1363" height="490" key="GridCell.Tab.0.center/0.0.1407.751@0.0.1407.751" timestamp="1582383091142" />
-    <state width="1310" height="368" key="GridCell.Tab.0.left" timestamp="1584423509097">
-      <screen x="0" y="0" width="1355" height="722" />
+    <state width="1372" height="329" key="GridCell.Tab.0.center/0.0.1418.759@0.0.1418.759" timestamp="1584507308597" />
+    <state width="1372" height="329" key="GridCell.Tab.0.left" timestamp="1584507308597">
+      <screen x="0" y="0" width="1418" height="759" />
     </state>
-    <state width="1310" height="368" key="GridCell.Tab.0.left/0.0.1355.722@0.0.1355.722" timestamp="1584423509097" />
+    <state width="1310" height="368" key="GridCell.Tab.0.left/0.0.1355.722@0.0.1355.722" timestamp="1584424353155" />
     <state width="1363" height="490" key="GridCell.Tab.0.left/0.0.1407.751@0.0.1407.751" timestamp="1582383091142" />
-    <state width="1310" height="368" key="GridCell.Tab.0.right" timestamp="1584423509098">
-      <screen x="0" y="0" width="1355" height="722" />
+    <state width="1372" height="329" key="GridCell.Tab.0.left/0.0.1418.759@0.0.1418.759" timestamp="1584507308597" />
+    <state width="1372" height="329" key="GridCell.Tab.0.right" timestamp="1584507308598">
+      <screen x="0" y="0" width="1418" height="759" />
     </state>
-    <state width="1310" height="368" key="GridCell.Tab.0.right/0.0.1355.722@0.0.1355.722" timestamp="1584423509098" />
+    <state width="1310" height="368" key="GridCell.Tab.0.right/0.0.1355.722@0.0.1355.722" timestamp="1584424353155" />
     <state width="1363" height="490" key="GridCell.Tab.0.right/0.0.1407.751@0.0.1407.751" timestamp="1582383091142" />
+    <state width="1372" height="329" key="GridCell.Tab.0.right/0.0.1418.759@0.0.1418.759" timestamp="1584507308598" />
     <state width="1310" height="253" key="GridCell.Tab.1.bottom" timestamp="1584189288321">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
@@ -781,6 +847,10 @@
       <screen x="0" y="0" width="1355" height="722" />
     </state>
     <state width="1310" height="253" key="GridCell.Tab.2.right/0.0.1355.722@0.0.1355.722" timestamp="1584189288321" />
+    <state width="196" height="499" key="HiddenNamespacesPopup" timestamp="1584424298464">
+      <screen x="0" y="0" width="1355" height="722" />
+    </state>
+    <state width="196" height="499" key="HiddenNamespacesPopup/0.0.1355.722@0.0.1355.722" timestamp="1584424298464" />
     <state x="208" y="16" key="Maven.ArtifactSearchDialog" timestamp="1583146048558">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
@@ -789,20 +859,21 @@
       <screen x="0" y="0" width="1407" height="751" />
     </state>
     <state x="534" y="86" key="RollbackChangesDialog/0.0.1407.751@0.0.1407.751" timestamp="1581688875934" />
-    <state x="50" y="8" width="1180" height="714" key="SettingsEditor" timestamp="1584361915718">
-      <screen x="0" y="0" width="1355" height="722" />
+    <state x="68" y="8" width="1180" height="714" key="SettingsEditor" timestamp="1584507404038">
+      <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="50" y="8" width="1180" height="714" key="SettingsEditor/0.0.1355.722@0.0.1355.722" timestamp="1584361915718" />
     <state x="108" y="23" width="1225" height="707" key="SettingsEditor/0.0.1407.751@0.0.1407.751" timestamp="1582381045474" />
+    <state x="68" y="8" key="SettingsEditor/0.0.1418.759@0.0.1418.759" timestamp="1584507404038" />
     <state x="530" y="280" key="VCS.ChangelistChooser" timestamp="1582782491615">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
     <state x="530" y="280" key="VCS.ChangelistChooser/0.0.1355.722@0.0.1355.722" timestamp="1582782491615" />
     <state x="550" y="291" key="VCS.ChangelistChooser/0.0.1407.751@0.0.1407.751" timestamp="1581598814933" />
-    <state x="270" y="83" key="Vcs.Push.Dialog.v2" timestamp="1584166991790">
+    <state x="270" y="83" key="Vcs.Push.Dialog.v2" timestamp="1584424169942">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
-    <state x="270" y="83" key="Vcs.Push.Dialog.v2/0.0.1355.722@0.0.1355.722" timestamp="1584166991790" />
+    <state x="270" y="83" key="Vcs.Push.Dialog.v2/0.0.1355.722@0.0.1355.722" timestamp="1584424169942" />
     <state x="392" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1581744413168">
       <screen x="0" y="0" width="1407" height="751" />
     </state>

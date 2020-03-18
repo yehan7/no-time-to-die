@@ -3,6 +3,7 @@ package com.yh.business.entity;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Map;
 //@PropertySource(value = {"classpath:personbean.yml"})
 @Component
 @ConfigurationProperties(prefix = "person")
-public class Person {
+public class Person implements Cloneable, Serializable {
     private String lastName;
     private Integer age;
     private Boolean boss;
@@ -92,5 +93,11 @@ public class Person {
                 ", lists=" + lists +
                 ", dog=" + dog +
                 '}';
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+
     }
 }
