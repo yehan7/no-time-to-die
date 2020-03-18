@@ -2,7 +2,13 @@ package com.yh.demo.designpattern.prototype;
 
 import com.yh.business.entity.Person;
 
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
 
 /**
  * @Description: 原型模式： 1.重写clone方法 2.序列化创建克隆对象

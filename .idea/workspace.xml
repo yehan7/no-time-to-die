@@ -30,13 +30,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06cc8d43-dca9-4e9f-8d81-e1c0f84257e7" name="Default Changelist" comment="工具类补充">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/prototype/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yh/demo/designpattern/prototype/Sheep.java" afterDir="false" />
+    <list default="true" id="06cc8d43-dca9-4e9f-8d81-e1c0f84257e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yh/business/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yh/business/entity/Person.java" afterDir="false" />
     </list>
     <list id="8f3c2b32-0b85-4c1e-bc44-adf62054ef0a" name="ideaChangelist" comment="ideaChangelist" />
     <list id="01f741db-9462-4475-b87c-aba9a00b41c7" name="logChangelist" comment="logChangelist">
@@ -219,7 +214,7 @@
     <property name="project.structure.proportion" value="0.15143603" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -492,7 +487,7 @@
       <workItem from="1584423437259" duration="916000" />
       <workItem from="1584425538361" duration="6000" />
       <workItem from="1584441961253" duration="615000" />
-      <workItem from="1584504556195" duration="2595000" />
+      <workItem from="1584504556195" duration="3125000" />
     </task>
     <task id="LOCAL-00001">
       <created>1581132573192</created>
@@ -690,7 +685,21 @@
       <option name="project" value="LOCAL" />
       <updated>1584424168598</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="工具类补充">
+      <created>1584507493665</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1584507493665</updated>
+    </task>
+    <task id="LOCAL-00030" summary="工具类补充">
+      <created>1584507570697</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1584507570698</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -768,12 +777,12 @@
       <screen x="0" y="0" width="1355" height="722" />
     </state>
     <state x="433" y="62" key="#xdebugger.evaluate/0.0.1355.722@0.0.1355.722" timestamp="1584158433818" />
-    <state x="318" y="0" key="CommitChangelistDialog2" timestamp="1584507492741">
+    <state x="318" y="0" key="CommitChangelistDialog2" timestamp="1584507569851">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="304" y="0" key="CommitChangelistDialog2/0.0.1355.722@0.0.1355.722" timestamp="1584424166509" />
     <state x="316" y="0" key="CommitChangelistDialog2/0.0.1407.751@0.0.1407.751" timestamp="1582383084750" />
-    <state x="318" y="0" key="CommitChangelistDialog2/0.0.1418.759@0.0.1418.759" timestamp="1584507492741" />
+    <state x="318" y="0" key="CommitChangelistDialog2/0.0.1418.759@0.0.1418.759" timestamp="1584507569851" />
     <state width="399" height="457" key="DebuggerActiveHint" timestamp="1584158423383">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
@@ -859,22 +868,22 @@
       <screen x="0" y="0" width="1407" height="751" />
     </state>
     <state x="534" y="86" key="RollbackChangesDialog/0.0.1407.751@0.0.1407.751" timestamp="1581688875934" />
-    <state x="68" y="8" width="1180" height="714" key="SettingsEditor" timestamp="1584507404038">
+    <state x="68" y="8" width="1180" height="714" key="SettingsEditor" timestamp="1584507933898">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="50" y="8" width="1180" height="714" key="SettingsEditor/0.0.1355.722@0.0.1355.722" timestamp="1584361915718" />
     <state x="108" y="23" width="1225" height="707" key="SettingsEditor/0.0.1407.751@0.0.1407.751" timestamp="1582381045474" />
-    <state x="68" y="8" key="SettingsEditor/0.0.1418.759@0.0.1418.759" timestamp="1584507404038" />
+    <state x="68" y="8" key="SettingsEditor/0.0.1418.759@0.0.1418.759" timestamp="1584507933898" />
     <state x="530" y="280" key="VCS.ChangelistChooser" timestamp="1582782491615">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
     <state x="530" y="280" key="VCS.ChangelistChooser/0.0.1355.722@0.0.1355.722" timestamp="1582782491615" />
     <state x="550" y="291" key="VCS.ChangelistChooser/0.0.1407.751@0.0.1407.751" timestamp="1581598814933" />
-    <state x="283" y="87" key="Vcs.Push.Dialog.v2" timestamp="1584507497204">
+    <state x="283" y="87" key="Vcs.Push.Dialog.v2" timestamp="1584507573304">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="270" y="83" key="Vcs.Push.Dialog.v2/0.0.1355.722@0.0.1355.722" timestamp="1584424169942" />
-    <state x="283" y="87" key="Vcs.Push.Dialog.v2/0.0.1418.759@0.0.1418.759" timestamp="1584507497204" />
+    <state x="283" y="87" key="Vcs.Push.Dialog.v2/0.0.1418.759@0.0.1418.759" timestamp="1584507573304" />
     <state x="392" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1581744413168">
       <screen x="0" y="0" width="1407" height="751" />
     </state>
