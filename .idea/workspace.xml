@@ -55,7 +55,45 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="PostgreSQL - postgres@182.92.129.244" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="PostgreSQL - postgres@182.92.129.244" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="PostgreSQL - postgres@182.92.129.244" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="PostgreSQL - postgres@182.92.129.244" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="PostgreSQL - postgres@182.92.129.244" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="PostgreSQL - postgres@182.92.129.244" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="access methods" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
@@ -175,7 +213,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -442,7 +480,8 @@
       <workItem from="1584508517096" duration="988000" />
       <workItem from="1584530653104" duration="5971000" />
       <workItem from="1584593240733" duration="49000" />
-      <workItem from="1584593302482" duration="1351000" />
+      <workItem from="1584593302482" duration="1419000" />
+      <workItem from="1584594735632" duration="28000" />
     </task>
     <task id="LOCAL-00001">
       <created>1581132573192</created>
@@ -675,7 +714,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584594464220</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="工具类补充">
+      <created>1584594658117</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1584594658117</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -765,12 +811,12 @@
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="460" y="233" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1418.759@0.0.1418.759" timestamp="1584593724967" />
-    <state x="255" y="0" key="CommitChangelistDialog2" timestamp="1584594463028">
+    <state x="255" y="0" key="CommitChangelistDialog2" timestamp="1584594702395">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="304" y="0" key="CommitChangelistDialog2/0.0.1355.722@0.0.1355.722" timestamp="1584424166509" />
     <state x="316" y="0" key="CommitChangelistDialog2/0.0.1407.751@0.0.1407.751" timestamp="1582383084750" />
-    <state x="255" y="0" key="CommitChangelistDialog2/0.0.1418.759@0.0.1418.759" timestamp="1584594463028" />
+    <state x="255" y="0" key="CommitChangelistDialog2/0.0.1418.759@0.0.1418.759" timestamp="1584594702395" />
     <state width="399" height="457" key="DebuggerActiveHint" timestamp="1584158423383">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
@@ -857,22 +903,22 @@
       <screen x="0" y="0" width="1407" height="751" />
     </state>
     <state x="534" y="86" key="RollbackChangesDialog/0.0.1407.751@0.0.1407.751" timestamp="1581688875934" />
-    <state x="68" y="8" width="1180" height="714" key="SettingsEditor" timestamp="1584594154766">
+    <state x="68" y="8" width="1180" height="714" key="SettingsEditor" timestamp="1584594764204">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="50" y="8" width="1180" height="714" key="SettingsEditor/0.0.1355.722@0.0.1355.722" timestamp="1584361915718" />
     <state x="108" y="23" width="1225" height="707" key="SettingsEditor/0.0.1407.751@0.0.1407.751" timestamp="1582381045474" />
-    <state x="68" y="8" key="SettingsEditor/0.0.1418.759@0.0.1418.759" timestamp="1584594154766" />
+    <state x="68" y="8" key="SettingsEditor/0.0.1418.759@0.0.1418.759" timestamp="1584594764204" />
     <state x="530" y="280" key="VCS.ChangelistChooser" timestamp="1582782491615">
       <screen x="0" y="0" width="1355" height="722" />
     </state>
     <state x="530" y="280" key="VCS.ChangelistChooser/0.0.1355.722@0.0.1355.722" timestamp="1582782491615" />
     <state x="550" y="291" key="VCS.ChangelistChooser/0.0.1407.751@0.0.1407.751" timestamp="1581598814933" />
-    <state x="283" y="87" key="Vcs.Push.Dialog.v2" timestamp="1584594637937">
+    <state x="283" y="87" key="Vcs.Push.Dialog.v2" timestamp="1584594659574">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="270" y="83" key="Vcs.Push.Dialog.v2/0.0.1355.722@0.0.1355.722" timestamp="1584424169942" />
-    <state x="283" y="87" key="Vcs.Push.Dialog.v2/0.0.1418.759@0.0.1418.759" timestamp="1584594637937" />
+    <state x="283" y="87" key="Vcs.Push.Dialog.v2/0.0.1418.759@0.0.1418.759" timestamp="1584594659574" />
     <state x="392" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1581744413168">
       <screen x="0" y="0" width="1407" height="751" />
     </state>
@@ -889,11 +935,11 @@
       <screen x="0" y="0" width="1355" height="722" />
     </state>
     <state x="376" y="90" width="603" height="542" key="find.popup/0.0.1355.722@0.0.1355.722" timestamp="1584165157762" />
-    <state x="430" y="160" key="git4idea.merge.GitPullDialog" timestamp="1584593520044">
+    <state x="430" y="160" key="git4idea.merge.GitPullDialog" timestamp="1584594693377">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
     <state x="411" y="152" key="git4idea.merge.GitPullDialog/0.0.1355.722@0.0.1355.722" timestamp="1584356916264" />
-    <state x="430" y="160" key="git4idea.merge.GitPullDialog/0.0.1418.759@0.0.1418.759" timestamp="1584593520044" />
+    <state x="430" y="160" key="git4idea.merge.GitPullDialog/0.0.1418.759@0.0.1418.759" timestamp="1584594693377" />
     <state x="381" y="183" key="run.anything.popup" timestamp="1584594142365">
       <screen x="0" y="0" width="1418" height="759" />
     </state>
