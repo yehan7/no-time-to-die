@@ -3,9 +3,14 @@ package com.yh.business.utils;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 
 /**
  * 根据IP地址获取详细的地域信息
@@ -95,7 +100,7 @@ public class AddressUtils {
             out.writeBytes("ip=" + ip);// 写数据,也就是提交你的表单 name=xxx&pwd=xxx
             out.flush();// 刷新
             out.close();// 关闭输出流
-            BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream(), "utf-8"));// 往对端写完数据对端服务器返回数据
+            BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream(), StandardCharsets.UTF_8));// 往对端写完数据对端服务器返回数据
             // ,以BufferedReader流来读取
             StringBuffer buffer = new StringBuffer();
             String line = "";

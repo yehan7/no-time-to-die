@@ -1,6 +1,6 @@
 package com.yh.demo.collectionunsafe;
 
-import java.util.*;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**

@@ -1,6 +1,5 @@
 package com.yh.business.thread;
 
-import com.yh.YhAppRunApplication;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Async;

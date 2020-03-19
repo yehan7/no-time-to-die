@@ -1,13 +1,15 @@
 package com.yh.service;
 
-import com.alibaba.fastjson.JSONObject;
-import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.SftpException;
 import com.yh.business.entity.SFTPConfig;
 import com.yh.business.utils.ExcelUtils;
 import com.yh.business.utils.SFTPUtils;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
-import org.apache.poi.xssf.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFCellStyle;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -20,10 +22,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Collections;
-import java.util.Vector;
-
-;
 
 /**
  * Created by idea China

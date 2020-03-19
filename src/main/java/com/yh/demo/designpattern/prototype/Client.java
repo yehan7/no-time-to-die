@@ -3,7 +3,6 @@ package com.yh.demo.designpattern.prototype;
 import com.yh.business.entity.Person;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 /**
  * @Description:

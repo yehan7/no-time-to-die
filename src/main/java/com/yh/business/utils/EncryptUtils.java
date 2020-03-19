@@ -17,7 +17,13 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.IOException;
 import java.math.BigInteger;
-import java.security.*;
+import java.nio.charset.StandardCharsets;
+import java.security.Key;
+import java.security.KeyFactory;
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 import java.security.spec.RSAPrivateKeySpec;
@@ -324,7 +330,8 @@ public class EncryptUtils {
      * BCD转字符串
      */
     public static String bcd2Str(byte[] bytes) {
-        char temp[] = new char[bytes.length * 2], val;
+        char[] temp = new char[bytes.length * 2];
+        char val;
 
         for (int i = 0; i < bytes.length; i++) {
             val = (char) (((bytes[i] & 0xf0) >> 4) & 0x0f);
@@ -397,8 +404,8 @@ public class EncryptUtils {
     public static String getMD5(String str) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
-            md.update(str.getBytes("utf-8"));
-            byte b[] = md.digest();
+            md.update(str.getBytes(StandardCharsets.UTF_8));
+            byte[] b = md.digest();
             int i;
             StringBuffer buf = new StringBuffer();
             for (int offset = 0; offset < b.length; offset++) {
@@ -520,7 +527,7 @@ public class EncryptUtils {
                 System.out.print("Key长度不是16位");
                 return null;
             }
-            byte[] raw = sKey.getBytes("ASCII");
+            byte[] raw = sKey.getBytes(StandardCharsets.US_ASCII);
             SecretKeySpec skeySpec = new SecretKeySpec(raw, "AES");
             Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
             IvParameterSpec iv = new IvParameterSpec(vi.getBytes());

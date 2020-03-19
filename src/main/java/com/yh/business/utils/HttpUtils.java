@@ -33,7 +33,7 @@ import javax.security.cert.CertificateException;
 import javax.security.cert.X509Certificate;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -114,7 +114,7 @@ public class HttpUtils {
             HttpEntity entity = response.getEntity();
             if (entity != null) {
                 InputStream instream = entity.getContent();
-                result = IOUtils.toString(instream, "UTF-8");
+                result = IOUtils.toString(instream, StandardCharsets.UTF_8);
             }
         } catch (IOException e) {
 
@@ -158,7 +158,7 @@ public class HttpUtils {
                 NameValuePair pair = new BasicNameValuePair(entry.getKey(), entry.getValue().toString());
                 pairList.add(pair);
             }
-            httpPost.setEntity(new UrlEncodedFormEntity(pairList, Charset.forName("UTF-8")));
+            httpPost.setEntity(new UrlEncodedFormEntity(pairList, StandardCharsets.UTF_8));
             response = httpClient.execute(httpPost);
             HttpEntity entity = response.getEntity();
             httpStr = EntityUtils.toString(entity, "UTF-8");

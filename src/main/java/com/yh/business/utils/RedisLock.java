@@ -25,7 +25,7 @@ public class RedisLock {
      */
     public void unlock(String key, String value) {
         try {
-            if (((String) redisTemplate.opsForValue().get(key)).equals(value)) {
+            if (redisTemplate.opsForValue().get(key).equals(value)) {
                 redisTemplate.opsForValue().getOperations().delete(key);
             }
         } catch (Exception e) {
@@ -52,10 +52,8 @@ public class RedisLock {
         if (current_value.equals("")
                 && Long.parseLong(current_value) < System.currentTimeMillis()) {
             String old_value = redisTemplate.opsForValue().getAndSet(key, value);
-            if (!old_value.equals("")
-                    && old_value.equals(current_value)) {
-                return true;
-            }
+            return !old_value.equals("")
+                    && old_value.equals(current_value);
         }
         return false;
     }
@@ -65,11 +63,8 @@ public class RedisLock {
     public boolean lock1(String key, String value) {
         //setIfAbsent相当于jedis中的setnx，如果能赋值就返回true，如果已经有值了，就返回false
         //即：在判断这个key是不是第一次进入这个方法
-        if (redisTemplate.opsForValue().setIfAbsent(key, value)) {
-            //第一次，即：这个key还没有被赋值的时候
-            return true;
-        }
-        return false;
+        //第一次，即：这个key还没有被赋值的时候
+        return redisTemplate.opsForValue().setIfAbsent(key, value);
     }
 
 
@@ -84,7 +79,7 @@ public class RedisLock {
         if (!current_value.equals("")
                 //超时了
                 && Long.parseLong(current_value) < System.currentTimeMillis()) {
-            ;//②
+            //②
             //返回true就能解决死锁
             return true;
         }
