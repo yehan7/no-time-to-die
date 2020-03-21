@@ -26,6 +26,14 @@ spring:
       simple:
         acknowledge-mode: manual
         prefetch: 100
+  data:
+    mongodb:
+      host: 182.92.129.244
+      database: app
+      port: 27017
+      #也可以使用uri连接
+      username: yh007
+      password: yh007xx
 
 pgsql:
   datasource:
