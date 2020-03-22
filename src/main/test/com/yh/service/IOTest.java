@@ -3,6 +3,7 @@ package com.yh.service;
 import com.jcraft.jsch.SftpException;
 import com.yh.business.entity.SFTPConfig;
 import com.yh.business.utils.ExcelUtils;
+import com.yh.business.utils.ExeUtils;
 import com.yh.business.utils.SFTPUtils;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -113,8 +114,24 @@ public class IOTest {
     }
 
 
-    @Test
-    public void ffsfs() {
+    public static void main(String[] args) {
+        /*Runtime rt = Runtime.getRuntime();
+        Process p = null;
+        try {
+            //执行的文件的位置
+            p = rt.exec("D:\\Program Files (x86)\\Mobatek\\MobaXterm\\MobaXterm.exe");
+            System.out.println("成功打开软件和文件！");
 
+        } catch (Exception e) {
+            System.out.println("打开软件失败");
+            e.printStackTrace();
+        }*/
+
+        //String file = "S:\\Protected\\Java\\（2）Java相关\\尚硅谷Shiro视频\\【更多资源，微信公众号：cplus人工智能算法后端技术】1.尚硅谷_Shiro_简介.avi";
+        /*ExeUtils.openVideo(file);*/
+        ExeUtils.openSSH();
     }
+
+
+
 }

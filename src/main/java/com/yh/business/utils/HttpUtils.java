@@ -124,7 +124,7 @@ public class HttpUtils {
 
 
     /**
-     * 发送 GET 请求（HTTP），K-V形式
+     * 请求图片返回输入流
      *
      * @param url
      * @return
