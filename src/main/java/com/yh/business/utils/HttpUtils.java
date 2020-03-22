@@ -122,6 +122,39 @@ public class HttpUtils {
         return JSON.parseObject(result);
     }
 
+
+    /**
+     * 发送 GET 请求（HTTP），K-V形式
+     *
+     * @param url
+     * @return
+     */
+    public static InputStream doGetPicture(String url) {
+        String apiUrl = url;
+        StringBuffer param = new StringBuffer();
+        apiUrl += param;
+        String result = null;
+        HttpClient httpClient = null;
+        if (apiUrl.startsWith("https")) {
+            httpClient = HttpClients.custom().setSSLSocketFactory(createSSLConnSocketFactory())
+                    .setConnectionManager(connMgr).setDefaultRequestConfig(requestConfig).build();
+        } else {
+            httpClient = HttpClients.createDefault();
+        }
+        try {
+            HttpGet httpGet = new HttpGet(apiUrl);
+            HttpResponse response = httpClient.execute(httpGet);
+            HttpEntity entity = response.getEntity();
+            if (entity != null) {
+                InputStream instream = entity.getContent();
+                return instream;
+            }
+        } catch (IOException e) {
+
+        }
+        return null;
+    }
+
     /**
      * 发送 POST 请求（HTTP），不带输入数据
      *
