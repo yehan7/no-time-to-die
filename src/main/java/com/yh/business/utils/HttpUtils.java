@@ -41,7 +41,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by idea China Author: YH007 Time: 20:08 2020/1/22 Description:
+ * @Description: Http工具类
+ * @Since: YH007
+ * @Date: 2020/3/14
  */
 public class HttpUtils {
 
