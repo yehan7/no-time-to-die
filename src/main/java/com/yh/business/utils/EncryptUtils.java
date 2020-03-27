@@ -9,8 +9,6 @@ package com.yh.business.utils;
 import org.apache.commons.codec.binary.Hex;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
@@ -28,6 +26,7 @@ import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 import java.security.spec.RSAPrivateKeySpec;
 import java.security.spec.RSAPublicKeySpec;
+import java.util.Base64;
 import java.util.HashMap;
 
 /**
@@ -38,8 +37,6 @@ public class EncryptUtils {
     private static Logger log = LoggerFactory.getLogger(EncryptUtils.class);
 
     //------------------------Base64--Begin--------------------------
-    private static final BASE64Encoder encoder = new BASE64Encoder();
-    private static final BASE64Decoder decoder = new BASE64Decoder();
 
     /**
      * Base64加密
@@ -51,7 +48,7 @@ public class EncryptUtils {
         if (toEncodeContent == null || "".equals(toEncodeContent)) {
             return null;
         }
-        return encoder.encode(toEncodeContent.getBytes());
+        return Base64.getEncoder().encodeToString(toEncodeContent.getBytes());
     }
 
     /**
@@ -66,8 +63,8 @@ public class EncryptUtils {
         }
         byte[] buf = null;
         try {
-            buf = decoder.decodeBuffer(toDecodeContent);
-        } catch (IOException e) {
+            buf = Base64.getDecoder().decode(toDecodeContent);
+        } catch (Exception e) {
             log.info("EncryptUtil-->decryptByBase64 Base64解密失败！", e);
         }
         return new String(buf);
@@ -504,7 +501,7 @@ public class EncryptUtils {
         cipher.init(Cipher.ENCRYPT_MODE, skeySpec, iv);
         byte[] encrypted = cipher.doFinal(sSrc.getBytes());
 
-        return new BASE64Encoder().encode(encrypted);//此处使用BASE64做转码功能，同时能起到2次加密的作用。
+        return Base64.getEncoder().encodeToString(encrypted);//此处使用BASE64做转码功能，同时能起到2次加密的作用。
     }
 
     /**
@@ -532,7 +529,7 @@ public class EncryptUtils {
             Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
             IvParameterSpec iv = new IvParameterSpec(vi.getBytes());
             cipher.init(Cipher.DECRYPT_MODE, skeySpec, iv);
-            byte[] encrypted1 = new BASE64Decoder().decodeBuffer(sSrc);//先用base64解密
+            byte[] encrypted1 = Base64.getDecoder().decode(sSrc);//先用base64解密
             try {
                 byte[] original = cipher.doFinal(encrypted1);
                 String originalString = new String(original);
