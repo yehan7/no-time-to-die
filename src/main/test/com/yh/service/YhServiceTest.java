@@ -9,7 +9,6 @@ import com.yh.business.schedule.TestTask;
 import com.yh.business.service.XxService;
 import com.yh.business.service.YhService;
 import com.yh.business.thread.AsyncTask;
-import com.yh.business.utils.AddressUtils;
 import com.yh.business.utils.CommonUtils;
 import com.yh.business.utils.HttpUtils;
 import com.yh.business.utils.RedisUtils;
@@ -167,12 +166,6 @@ public class YhServiceTest {
         LOGGER.info("person:" + person);
     }
 
-    @Test
-    public void test12() throws UnsupportedEncodingException {
-        String address = AddressUtils.getAddresses("192.168.1.103");
-        LOGGER.info("获取到的ip的地区为：" + address);
-    }
-
 
    /* public static void main(String[] args) throws InterruptedException {
         BlockingDeque<Runnable> workQueue = new LinkedBlockingDeque<>(5);
@@ -292,9 +285,9 @@ public class YhServiceTest {
 
 
     @Test
-    public void test111() {
+    public void test111() throws UnsupportedEncodingException {
 
-        redisUtils.set("yh", "007");
+        //redisUtils.set("yh", "007");
 
     }
 
