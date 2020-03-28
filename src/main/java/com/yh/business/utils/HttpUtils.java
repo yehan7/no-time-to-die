@@ -41,7 +41,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Description: Http工具类
+ * @Description: HttpClient工具类
  * @Since: YH007
  * @Date: 2020/3/14
  */
@@ -73,21 +73,21 @@ public class HttpUtils {
     }
 
     /**
-     * 发送 GET 请求（HTTP），不带输入数据
+     * doGet 不带输入数据
      *
-     * @param url
-     * @return
+     * @param url 请求地址
+     * @return JSONObject
      */
     public static JSONObject doGet(String url) {
         return doGet(url, new HashMap<String, Object>());
     }
 
     /**
-     * 发送 GET 请求（HTTP），K-V形式
+     * doGet K-V形式
      *
-     * @param url
-     * @param params
-     * @return
+     * @param url    请求地址
+     * @param params 参数
+     * @return JSONObject
      */
     public static JSONObject doGet(String url, Map<String, Object> params) {
         String apiUrl = url;
@@ -126,10 +126,10 @@ public class HttpUtils {
 
 
     /**
-     * 请求图片返回输入流
+     * doGetPicture 请求图片返回输入流
      *
-     * @param url
-     * @return
+     * @param url 请求地址
+     * @return InputStream
      */
     public static InputStream doGetPicture(String url) {
         String apiUrl = url;
@@ -158,21 +158,21 @@ public class HttpUtils {
     }
 
     /**
-     * 发送 POST 请求（HTTP），不带输入数据
+     * doPost 不带输入数据
      *
-     * @param apiUrl
-     * @return
+     * @param apiUrl 请求路径
+     * @return JSONObject
      */
     public static JSONObject doPost(String apiUrl) {
         return doPost(apiUrl, new HashMap<String, Object>());
     }
 
     /**
-     * 发送 POST 请求，K-V形式
+     * doPost 请求，K-V形式
      *
      * @param apiUrl API接口URL
      * @param params 参数map
-     * @return
+     * @return JSONObject
      */
     public static JSONObject doPost(String apiUrl, Map<String, Object> params) {
         CloseableHttpClient httpClient = null;
@@ -212,11 +212,11 @@ public class HttpUtils {
     }
 
     /**
-     * 发送 POST 请求，JSON形式
+     * doPost JSON形式
      *
-     * @param apiUrl
+     * @param apiUrl 请求地址
      * @param json   json对象
-     * @return
+     * @return JSONObject
      */
     public static JSONObject doPost(String apiUrl, Object json) {
         CloseableHttpClient httpClient = null;
@@ -256,7 +256,7 @@ public class HttpUtils {
     /**
      * 创建SSL安全连接
      *
-     * @return
+     * @return SSLConnectionSocketFactory
      */
     private static SSLConnectionSocketFactory createSSLConnSocketFactory() {
         SSLConnectionSocketFactory sslsf = null;
@@ -287,11 +287,13 @@ public class HttpUtils {
 
 
     /**
-     * @param: url  url
-     * @param: param  param
-     * @param: header  header
-     * @param: body  body
-     * @return: java.lang.String
+     * doHttpPost 带请求参数、请求头、请求体
+     *
+     * @param url    请求地址
+     * @param param  请求参数
+     * @param header 请求头
+     * @param body   请求体
+     * @return String
      */
     public static String doHttpPost(String url, Map<String, String> param,
                                     Map<String, String> header, Map<String, ?> body) {
