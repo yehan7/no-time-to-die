@@ -295,7 +295,13 @@ public class HttpUtils {
      */
     public static String doHttpPost(String url, Map<String, String> param,
                                     Map<String, String> header, Map<String, ?> body) {
-        HttpClient client = HttpClients.createDefault();
+        CloseableHttpClient httpClient = null;
+        if (url.startsWith("https")) {
+            httpClient = HttpClients.custom().setSSLSocketFactory(createSSLConnSocketFactory())
+                    .setConnectionManager(connMgr).setDefaultRequestConfig(requestConfig).build();
+        } else {
+            httpClient = HttpClients.createDefault();
+        }
         HttpPost httpPost = new HttpPost(url);
         if (null != param && param.keySet().size() > 0) {
             StringBuffer paramStr = new StringBuffer();
@@ -319,7 +325,7 @@ public class HttpUtils {
         StringEntity bodyEntity = new StringEntity(jsonString, "UTF-8");
         httpPost.setEntity(bodyEntity);
         try {
-            HttpResponse response = client.execute(httpPost);
+            HttpResponse response = httpClient.execute(httpPost);
             HttpEntity entity = response.getEntity();
             return EntityUtils.toString(entity);
         } catch (IOException e) {
