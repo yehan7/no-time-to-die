@@ -12,9 +12,9 @@ public class CommonUtils {
     /**
      * 实体类转化成map
      *
-     * @param: obj obj
-     * @return: java.util.Map<java.lang.String, java.lang.Object>
-     */
+     * @param obj obj
+     * @return: Map<String, Object>
+     **/
     public static Map<String, Object> object2Map(Object obj) {
         Map<String, Object> map = new HashMap<>();
         if (obj == null) {

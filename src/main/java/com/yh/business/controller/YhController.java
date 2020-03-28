@@ -12,10 +12,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by idea China
- * Author: YH007
- * Time: 19:49 2020/1/22
- * Description:
+ * @Description:
+ * @Since: YH007
+ * @Date: 2020/1/21
  */
 @RestController
 @RequestMapping("/api")

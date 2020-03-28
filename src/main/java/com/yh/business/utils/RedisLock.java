@@ -18,11 +18,11 @@ public class RedisLock {
     private StringRedisTemplate redisTemplate;
 
     /**
-     * 解锁方法
+     * 解锁
      *
-     * @param: key  key
-     * @param: value  value
-     */
+     * @param key   key
+     * @param value value
+     **/
     public void unlock(String key, String value) {
         try {
             if (redisTemplate.opsForValue().get(key).equals(value)) {
@@ -34,12 +34,12 @@ public class RedisLock {
     }
 
     /**
-     * 加锁方法
+     * 加锁
      *
-     * @param: key  key
-     * @param: value  value
-     * @return: 加锁状态
-     */
+     * @param key   key
+     * @param value value
+     * @return: boolean
+     **/
     public boolean lock(String key, String value) {
         //setIfAbsent相当于jedis中的setnx，如果能赋值就返回true，如果已经有值了，就返回false
         //即：在判断这个key是不是第一次进入这个方法

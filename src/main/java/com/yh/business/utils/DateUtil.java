@@ -10,9 +10,9 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * 日期操作类
- * 创建者 科帮网
- * 创建时间	2017年7月31日
+ * @Description: 日期操作类
+ * @Since: YH007
+ * @Date: 2020/3/14
  */
 public class DateUtil {
     private final static SimpleDateFormat sdfYear = new SimpleDateFormat("yyyy");
@@ -62,14 +62,12 @@ public class DateUtil {
     }
 
     /**
-     * @param s
-     * @param e
-     * @return boolean
-     * @throws
-     * @Title: compareDate
-     * @Description:(日期比较，如果s>=e 返回true 否则返回false)
-     * @author luguosui
-     */
+     * 日期比较，如果s>=e 返回true 否则返回false
+     *
+     * @param s s
+     * @param e e
+     * @return: boolean
+     **/
     public static boolean compareDate(String s, String e) {
         if (fomatDate(s) == null || fomatDate(e) == null) {
             return false;
@@ -80,8 +78,9 @@ public class DateUtil {
     /**
      * 格式化日期
      *
-     * @return
-     */
+     * @param date date
+     * @return: Date
+     **/
     public static Date fomatDate(String date) {
         DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
         try {
@@ -95,8 +94,9 @@ public class DateUtil {
     /**
      * 校验日期是否合法
      *
-     * @return
-     */
+     * @param s s
+     * @return: boolean
+     **/
     public static boolean isValidDate(String s) {
         DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
         try {
@@ -108,6 +108,13 @@ public class DateUtil {
         }
     }
 
+    /**
+     * 获取隔的年数
+     *
+     * @param startTime startTime
+     * @param endTime   endTime
+     * @return: int
+     **/
     public static int getDiffYear(String startTime, String endTime) {
         DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
         try {
@@ -120,13 +127,12 @@ public class DateUtil {
     }
 
     /**
-     * <li>功能描述：时间相减得到天数
+     * 时间相减得到天数
      *
-     * @param beginDateStr
-     * @param endDateStr
-     * @return long
-     * @author Administrator
-     */
+     * @param beginDateStr beginDateStr
+     * @param endDateStr   endDateStr
+     * @return: long
+     **/
     public static long getDaySub(String beginDateStr, String endDateStr) {
         long day = 0;
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
@@ -148,9 +154,9 @@ public class DateUtil {
     /**
      * 得到n天之后的日期
      *
-     * @param days
-     * @return
-     */
+     * @param days days
+     * @return: java.lang.String
+     **/
     public static String getAfterDayDate(String days) {
         int daysInt = Integer.parseInt(days);
 
@@ -167,9 +173,9 @@ public class DateUtil {
     /**
      * 得到n天之前的日期
      *
-     * @param days
-     * @return
-     */
+     * @param days days
+     * @return: java.lang.String
+     **/
     public static String getBeforeDayDate(String days) {
         int daysInt = Integer.parseInt(days);
 
@@ -185,9 +191,9 @@ public class DateUtil {
     /**
      * 得到n天之后是周几
      *
-     * @param days
-     * @return
-     */
+     * @param days days
+     * @return: java.lang.String
+     **/
     public static String getAfterDayWeek(String days) {
         int daysInt = Integer.parseInt(days);
 
@@ -288,6 +294,11 @@ public class DateUtil {
         return resultTimes;
     }
 
+    /**
+     * 获取当前时间戳
+     *
+     * @return: java.lang.String
+     **/
     public static String getTimestamp() {
         return String.valueOf(System.currentTimeMillis() / 1000);
     }
