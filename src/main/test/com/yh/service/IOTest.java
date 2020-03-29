@@ -3,8 +3,8 @@ package com.yh.service;
 import com.jcraft.jsch.SftpException;
 import com.yh.business.entity.SFTPConfig;
 import com.yh.business.utils.ExcelUtils;
-import com.yh.business.utils.ExeUtils;
 import com.yh.business.utils.SFTPUtils;
+import com.yh.business.utils.ZipUtils;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
 import org.apache.poi.xssf.usermodel.*;
 import org.junit.Test;
@@ -110,7 +110,7 @@ public class IOTest {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         /*Runtime rt = Runtime.getRuntime();
         Process p = null;
         try {
@@ -125,7 +125,16 @@ public class IOTest {
 
         //String file = "S:\\Protected\\Java\\（2）Java相关\\尚硅谷Shiro视频\\【更多资源，微信公众号：cplus人工智能算法后端技术】1.尚硅谷_Shiro_简介.avi";
         /*ExeUtils.openVideo(file);*/
-        ExeUtils.openSSH();
+        //ExeUtils.openSSH();
+
+
+        //File file = new File("E:\\证件照");
+        //ZipUtils.toZip("E:\\证件照\\", new FileOutputStream(new File("E:\\证件照.zip")), true);
+
+
+        ZipUtils.unZip(new File("E:\\证件照.rar"), "E:\\test\\");
+
+
     }
 
 

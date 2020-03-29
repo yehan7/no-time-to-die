@@ -26,8 +26,7 @@ public class ZipUtils {
      *                         false:所有文件跑到压缩包根目录下(注意：不保留目录结构可能会出现同名文件,会压缩失败)
      * @throws RuntimeException 压缩失败会抛出运行时异常
      */
-    public static void toZip(String srcDir, OutputStream out, boolean KeepDirStructure)
-            throws RuntimeException {
+    public static void toZip(String srcDir, OutputStream out, boolean KeepDirStructure) {
         long start = System.currentTimeMillis();
         ZipOutputStream zos = null;
         try {
@@ -56,7 +55,6 @@ public class ZipUtils {
      * @param out      压缩文件输出流
      * @throws RuntimeException 压缩失败会抛出运行时异常
      */
-
     public static void toZip(List<File> srcFiles, OutputStream out) throws RuntimeException {
         long start = System.currentTimeMillis();
         ZipOutputStream zos = null;
@@ -98,10 +96,7 @@ public class ZipUtils {
      *                         false:所有文件跑到压缩包根目录下(注意：不保留目录结构可能会出现同名文件,会压缩失败)
      * @throws Exception
      */
-
-    private static void compress(File sourceFile, ZipOutputStream zos, String name,
-
-                                 boolean KeepDirStructure) throws Exception {
+    private static void compress(File sourceFile, ZipOutputStream zos, String name, boolean KeepDirStructure) throws Exception {
         byte[] buf = new byte[BUFFER_SIZE];
         if (sourceFile.isFile()) {
             // 向zip输出流中添加一个zip实体，构造器中name为zip实体的文件的名字
@@ -141,10 +136,11 @@ public class ZipUtils {
     }
 
     /**
-     * @author aRunner
-     * @date 2018/11/2
-     * @description解压文件
-     */
+     * 解压文件
+     *
+     * @param srcFile     srcFile
+     * @param destDirPath destDirPath
+     **/
     public static void unZip(File srcFile, String destDirPath) throws RuntimeException {
         long start = System.currentTimeMillis();
         // 判断源文件是否存在
