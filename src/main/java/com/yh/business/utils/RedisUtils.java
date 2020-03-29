@@ -12,7 +12,9 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by idea China Author: YH007 Time: 17:48 2020/1/24 Description:
+ * @Description: Redis工具类
+ * @Since: YH007
+ * @Date: 2020/3/14
  */
 @Component
 public final class RedisUtils {

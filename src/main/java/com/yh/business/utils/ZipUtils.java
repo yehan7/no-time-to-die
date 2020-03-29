@@ -8,6 +8,11 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
 
+/**
+ * @Description: Zip处理工具类
+ * @Since: YH007
+ * @Date: 2020/3/14
+ */
 public class ZipUtils {
 
     private static final int BUFFER_SIZE = 2 * 1024;

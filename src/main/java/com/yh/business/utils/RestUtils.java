@@ -15,7 +15,11 @@ import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.X509Certificate;
 
-
+/**
+ * @Description: 获取https的RestTemplate
+ * @Since: YH007
+ * @Date: 2020/3/14
+ */
 public class RestUtils {
 
     /**

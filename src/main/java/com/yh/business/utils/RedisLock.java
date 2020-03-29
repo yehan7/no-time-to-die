@@ -6,12 +6,10 @@ import org.springframework.stereotype.Component;
 
 
 /**
- * Created by idea China
- * Author: YH007
- * Time: 16:50 2020/1/25
- * Description: Redis实现分布式锁
+ * @Description: Redis分布式锁
+ * @Since: YH007
+ * @Date: 2020/3/14
  */
-
 @Component
 public class RedisLock {
     @Autowired
