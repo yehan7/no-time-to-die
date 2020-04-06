@@ -24,11 +24,11 @@ public class ExcelUtils {
 
 
     /**
-     * 获取到workbook
+     * getWorkbookByPath 获取到workbook
      *
-     * @param: filePath  filePath
+     * @param filePath filePath
      * @return: org.apache.poi.xssf.usermodel.XSSFWorkbook
-     */
+     **/
     public static XSSFWorkbook getWorkbookByPath(String filePath) {
         FileInputStream fis;
         XSSFWorkbook workbook = null;
@@ -43,12 +43,11 @@ public class ExcelUtils {
 
 
     /**
-     * 获取单元格的值
+     * getCellValueByCell 获取单元格的值
      *
-     * @param: cell  cell
+     * @param cell cell
      * @return: java.lang.String
-     */
-    //获取单元格各类型值，返回字符串类型
+     **/
     public static String getCellValueByCell(Cell cell) {
         //判断是否为null或空串
         if (cell == null || cell.toString().trim().equals("")) {
