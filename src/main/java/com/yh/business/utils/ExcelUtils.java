@@ -1,5 +1,15 @@
 package com.yh.business.utils;
 
+import com.alibaba.excel.EasyExcel;
+import com.alibaba.excel.ExcelReader;
+import com.alibaba.excel.ExcelWriter;
+import com.alibaba.excel.metadata.Sheet;
+import com.alibaba.excel.read.builder.ExcelReaderSheetBuilder;
+import com.alibaba.excel.read.metadata.ReadSheet;
+import com.alibaba.excel.support.ExcelTypeEnum;
+import com.alibaba.excel.write.metadata.WriteSheet;
+import com.yh.business.entity.dto.AlarmExcelDto;
+import com.yh.business.listener.AlarmExcelListener;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.ss.usermodel.Cell;
@@ -8,9 +18,12 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by idea China
@@ -79,5 +92,31 @@ public class ExcelUtils {
                 break;
         }
         return cellValue;
+    }
+
+
+    public static void main(String[] args) {
+        File file = new File("/Users/yehan/Desktop/ywx762730_5G告警.xlsx");
+        AlarmExcelListener alarmExcelListener = new AlarmExcelListener();
+        //ReadSheet build = EasyExcel.read(file).excelType(ExcelTypeEnum.XLSX).sheet(0).build();
+
+
+
+        //List<ReadSheet> readSheets = build.excelExecutor().sheetList();
+
+        EasyExcel.read(file,alarmExcelListener).excelType(ExcelTypeEnum.XLSX).sheet(0).doRead();
+
+
+        List<Object> resultList = alarmExcelListener.getResultList();
+        EasyExcel.write("/Users/yehan/Desktop/ywx762730_5G告警_1.xlsx", AlarmExcelDto.class)
+                .excelType(ExcelTypeEnum.XLSX).sheet(0).doWrite(resultList);
+        System.out.println();
+
+
+       /* List<List<String>> lists = Arrays.asList(Arrays.asList("省份", "地区", "本期告警数", "上期告警数", "级别", "本期告警比例", "上期告警比例", "备注"));
+        EasyExcel.write("/Users/yehan/Desktop/ywx762730_5G告警_1.xlsx")
+                .excelType(ExcelTypeEnum.XLSX).sheet(0).
+                head(lists).doWrite(objects);*/
+
     }
 }
